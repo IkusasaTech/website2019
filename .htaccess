@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://ikusasatech.com/$1

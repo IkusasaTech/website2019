@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<link href='css/fullcalendar.min.css' rel='stylesheet' />
+<link href='css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+<link rel="manifest" href="/manifest.json">
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Weather PWA">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+	<meta name="msapplication-TileColor" content="#2b2835">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119321085-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-119321085-1');
+</script>
+
+    <!-- Hotjar Tracking Code for www.ikusasatech.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:734512,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<script src='js/moment.min.js'></script>
+<script src='js/jquery.min.js'></script>
+<script src='js/fullcalendar.min.js'></script>
+<script>
+
+	$(document).ready(function() {
+		
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'listDay,listWeek,month'
+			},
+
+			// customize the button names,
+			// otherwise they'd all just say "list"
+			views: {
+				listDay: { buttonText: 'list day' },
+				listWeek: { buttonText: 'list week' }
+			},
+
+			defaultView: 'listWeek',
+			defaultDate: '2017-11-12',
+			navLinks: true, // can click day/week names to navigate views
+			editable: false,
+			eventLimit: true, // allow "more" link when too many events
+			events: [
+				{
+					title: 'All Day Event',
+					start: '2017-11-01'
+				},
+				{
+					title: 'Long Event',
+					start: '2017-11-07',
+					end: '2017-11-10'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2017-11-09T16:00:00'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2017-11-16T16:00:00'
+				},
+				{
+					title: 'Conference',
+					start: '2017-11-11',
+					end: '2017-11-13'
+				},
+				{
+					title: 'Meeting',
+					start: '2017-11-12T10:30:00',
+					end: '2017-11-12T12:30:00'
+				},
+				{
+					title: 'Lunch',
+					start: '2017-11-12T12:00:00'
+				},
+				{
+					title: 'Meeting',
+					start: '2017-11-12T14:30:00'
+				},
+				{
+					title: 'Happy Hour',
+					start: '2017-11-12T17:30:00'
+				},
+				{
+					title: 'Dinner',
+					start: '2017-11-12T20:00:00'
+				},
+				{
+					title: 'Birthday Party',
+					start: '2017-11-13T07:00:00'
+				},
+				{
+					title: 'Click for Google',
+					url: 'http://google.com/',
+					start: '2017-11-28'
+				}
+			]
+		});
+		
+	});
+
+</script>
+<style>
+
+	body {
+		margin: 40px 10px;
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 14px;
+	}
+
+	#calendar {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+</style>
+</head>
+<body>
+
+	<div id='calendar'></div>
+        <script type="text/javascript">function add_chatinline(){var hccid=94367399;var nt=document.createElement("script");nt.async=true;nt.src="https://mylivechat.com/chatinline.aspx?hccid="+hccid;var ct=document.getElementsByTagName("script")[0];ct.parentNode.insertBefore(nt,ct);}
+add_chatinline(); </script>
+
+</body>
+</html>

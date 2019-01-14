@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" type="image/png" sizes="56x57" href="images/fav-icon/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><script src="vendor/html5shiv.js"></script><script src="vendor/respond.js"></script><![endif]-->
+    <link rel="manifest" href="/manifest.json">
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Weather PWA">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <link rel='stylesheet' href='http://git.wimbarelds.nl/TimeCircles/inc/TimeCircles.css'>
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#2b2835">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119321085-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-119321085-1');
+    </script>
+
+    <!-- Hotjar Tracking Code for www.ikusasatech.com -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 734512, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+</head>
+
+<body class="home-bg">
+    <div class="main-page-wrapper">
+        <!--=============================================Theme Header==============================================-->
+        <header class="theme-main-header">
+            <div class="container">
+                <a href="index.html" class="logo float-left tran4s">
+                    <img src="images/logo/logo.png" alt="ICT Consulting and Training">
+                </a>
+                <nav class="navbar float-right theme-main-menu one-page-menu">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1"
+                            aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>Menu
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="index.html">HOME</a>
+                            </li>
+                            <li>
+                                <a href="about.html">ABOUT</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" a:hover>TRAINING<span class="caret"></span></a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item div-drop" href="training.html">TRAINING COURSES</a><br>                                        
+                                    <a class="dropdown-item div-drop" href="Ikusasa - Public -Full Training Schedule.pdf">COURSE SCHEDULE</a>
+                                </div>
+                            </li>
+                            <li class="mega">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">CONSULTING<span class="caret"></span></a>
+                                <div class="dropdown-menu">
+                            <ul>
+                                <li>SMALL MEDIUM ENTERPRISE<span class="caret"></span>
+                                    <ul>
+                                        <li><a href="CompanyReg.html">Company Registration</a></li>
+                                        <li><a href="Branding & Graphic Design.html">Branding & Graphic Design</a></li>
+                                        <li><a href="webdev.html">Web Development</a></li>
+                                        <li><a href="onlinemarketing.html">Online Marketing</a></li>
+                                        <li><a href="hosting.html">Hosting</a></li>
+                                        <li><a href="support-maintanance.html">Support and Maintanence</a></li>
+                                        <li><a href="IT-Audit.html">IT Audit</a></li>
+                                    </ul>
+                                </li>
+                                <li>LARGE ENTERPRISE<span class="caret"></span>
+                                    <ul>
+                                        <li><a href="crm.html">Customer Relationship Management</a></li>
+                                        <li><a href="lms.html">Learning Management System</a></li>
+                                        <li><a href="intranet.html">Intranet</a></li>
+                                        <li><a href="onlinemarketing.html">Online Marketing</a></li>
+                                        <li><a href="support-maintanance.html">Support & Maintanence</a></li>
+                                        <li><a href="IT-Audit.html">IT Audit</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" a:hover>CONSULTING</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item div-drop" href="SEO.html">SMALL MEDIUM ENTERPRISE</a><br>                                        
+                                <a class="dropdown-item div-drop" href="OEM.html">LARGE ENTERPRISE</a>
+                            </div>-->
+                        </li> 
+                            <li class="dropdown-holder">
+                                <a href="blog.html">BLOG</a>
+
+                            </li>
+                            <li>
+                                <a href="contact.html">CONTACT</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!----End Header---->
+    </div>
+    <div class="theme-title">
+
+        <h4>Customer Relationship Management</h4>
+        <p>A CRM gives everyone across the business, including 
+            sales, customer service, marketing, and business 
+            development, a better way to manage the customer 
+            relationships and interactions that drive success.
+            Today growing businesses manage customer connections
+             and information in a variety of ways. Others use 
+             Excel spreadsheets or Google documents. While that 
+             may help in the short term when you have a small 
+             team and don’t plan on scaling your business, if you 
+             want to scale for fast growth, it may be time to consider 
+             a CRM system to help you collect your precious business data 
+             in one place, make it accessible via the cloud, and free up 
+             your time to focus on delighting customers rather than 
+             letting valuable insights and information fall through the cracks.
+        </p>
+    </div>
+    <hr>
+    <br>
+    <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="iterm2">
+                        <img src="images/crm.png" alt="multiple screen">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="iterm2">
+    
+                        <p class="parag">
+                            <br>
+                            In the context of your ERP or financial 
+                            systems, one could consider CRM as a “future view” 
+                            into your revenue stream as opposed to a “historical 
+                            view” of revenue. CRM is also a future view into trends 
+                            and events that will be leading indicators of your revenue 
+                            and profit metrics "This result into increased competition at 
+                            the top end of the CRM market, with the continued focus 
+                            of global vendors' sales forces driving good growth 
+                            worldwide in all CRM subsegments but only for cloud or 
+                            software as a service (SaaS) applications. 
+                            The CEO and CFO will use CRM dashboards to monitor 
+                            these leading indicators. They may look for changes 
+                            to lead generation, opportunity creation, or pipeline 
+                            value to spot early indicators of future problems to the 
+                            top-line. This will enable a pro-active approach to managing the business.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="iterm2">
+        
+                            <p class="parag">Yo will have some ideas about how to engage 
+                                    with your customers. Our CRM will help you to deliver
+                                    consistent high quality customer experience.
+                                    CRM systems can be used to embed your best 
+                                    sales or customer service processes that will 
+                                    guide your people through every customer 
+                                    interaction. Templates can be created and used 
+                                    to guide your people through complex processes. 
+                                    Workflow automation can be used to automate activities 
+                                    to ensure best practices are followed while reducing the 
+                                    administrative overhead of managing the CRM. CRM is now 
+                                    able to use natural language processing, deep learning 
+                                    and machine learning to better predict customer needs 
+                                    and deliver personalized interactions. CRM integration 
+                                    with social will become more functional, 
+                                    linking social channels to customer service issues 
+                                    in CRM systems, as well as marketing. In addition to the 
+                                    always-on consumer, the marketer is expected to be always-on 
+                                    as well. What this means is the ability to access systems and 
+                                    reports on smartphones and tablets.<br>
+                                    
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="iterm2">
+                                <img src="images/CRM1.jpg" alt="multiple screen">
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <strong><center>Question
+                is are you doing the right thing to provide quality 
+                customer experience ?</center></strong>
+            <hr>
+            <br>
+            <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="iterm2">
+                                <img src="images/CRM (4).png" alt="multiple screen">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="iterm2">
+            
+                                <p class="parag">
+                                        You need CRM to make your business more 
+                                        efficient and increase your revenue per 
+                                        employee. You need CRM to create repeatable 
+                                        successful processes. You need a CRM because 
+                                        we (and your competitors) are looking for 
+                                        competitive advantage in a multi-channel customer 
+                                        environment. You need to capture the interest of 
+                                        customers that are increasingly sophisticated and 
+                                        are ignoring the old methods we used to market and 
+                                        sell to them. You need a CRM to look into your near 
+                                        future and be predictive of your revenue. You need 
+                                        CRM to mitigate the risk and costs of staff turnover. 
+                                        You need CRM to engage in a cycle of continuous 
+                                        improvement. You need CRM for your business to survive
+                                        CRM can capture detailed information about 
+                                        your customers and their behaviors and enable 
+                                        targeted marketing, product development, and 
+                                        sales activities. It can enable you to create 
+                                        the illusion of the personal touch with every 
+                                        interaction.<br>
+                                        <strong>If you can not make your job easy, how can you
+                                            fullfill needs of your clients ?
+                                        </strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <center> <a href="contact.html#send-msg" class="glowing-button crm-quote">Get A Quote
+                    </a>
+                    </p>
+                </center>
+    
+    <!---Footer---->
+    <footer>
+            <div class="container">
+                <div class="row footer">
+                    <div class="footerbottom">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="footerwidget">
+                                <h6>Our Partners in Business</h6>
+    
+                                <div class="menu-course">
+                                    <ul class="menu">
+                                        <li>
+                                            <a href="http://www.dsbd.gov.za/" target="_blank">
+                                                The Department of Small Business Development
+                                            </a>
+                                        </li>
+    
+                                        <li>
+                                            <a href="https://www.l2b.co.za" target="_blank">ABIOT Projects Consultants</a>
+                                        </li>
+    
+                                        <li>
+                                            <a href="http://mightycomms.co.za/" target="_blank">Mightycomms</a>
+                                        </li>
+    
+                                        <li>
+                                            <a href="https://www.geekulcha.com/" target="_blank">Geekulcha</a>
+                                        </li>
+    
+                                        <li>
+                                            <a href="#" target="_blank">NovaTech</a>
+                                        </li>
+    
+                                        <li>
+                                            <a href="http://katzconsulting.co.za/" target="_blank">Katz Consulting</a>
+                                        </li>
+    
+                                        <li>
+                                            <a href="#" target="_blank">Intergrated Taxi Services</a>
+                                        </li>
+    
+                                        <li>
+                                            <a href="#" target="_blank">Transformer SA</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-3 col-sm-6">
+                            <div class="footerwidget">
+                                <h6>Careers</h6>
+    
+                                <div class="menu-course">
+                                    <ul class="menu">
+                                        <li>
+                                            <a href="apply.html">Learnerships</a>
+                                        </li>
+    
+                                        <li>
+                                            <a href="apply.html">Interships</a>
+                                        </li>
+    
+                                        <li>
+                                            <a href="apply.html">Jobs</a>
+                                        </li>
+                                        <div class="modal fade" id="vacant" tabindex="-1" role="dialog" aria-labelledby="comptia"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Application for
+                                                            Vacant</h5>
+    
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+    
+                                                    <div class="modal-body">
+                                                        <h3>Please email us your CV to recruitment@ikusasatech.com</h3>
+    
+                                                    </div>
+    
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footerwidget">
+                            <h6>Contact</h6>
+    
+                            <p>Feel free contact us</p>
+    
+                            <div class="contact-info">
+                                <i class="fa fa-map-marker"></i>
+                                : 563 Old Pretoria Rd, Midrand, Johannesburg, 1685
+    
+                                <br>
+                                <i class="fa fa-phone"></i>
+                                : +2711 025 8267/6806
+                                <br>
+                                <i class="fa fa-envelope-o"></i>
+                                : info@ikusasatech.com
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footerwidget">
+                            <h6>Social Media</h6>
+    
+                            <div class="footer-social-icons">
+                                <h4 class="_14">Follow us on</h4>
+                                <ul class="social-icons">
+                                    <li><a href="https://www.facebook.com/IkusasaTech" target="_blank" class="social-icon">
+                                            <i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="http://twitter.com/IkusasaTech" target="_blank" class="social-icon"> <i
+                                                class="fa fa-twitter"></i></a></li>
+                                    <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+                                    <li><a href="https://www.instagram.com/ikusasatechsolutions/" target="_blank" class="social-icon">
+                                            <i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/company/ikusasa-technology-solutions/" target="_blank"
+                                            class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="https://plus.google.com/u/1/103307629887413770234" target="_blank" class="social-icon">
+                                            <i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+    
+            <div class="footer2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel-body">
+                                <p class="simplenav">
+                                    <a href="index.html">Home</a>
+    
+                                    |
+    
+                                    <a href="about.html">About Us</a>
+    
+                                    |
+    
+                                    <a href="consulting.html">Consulting</a>
+    
+                                    |
+    
+                                    <a href="training.html">Training</a>
+    
+                                    |
+    
+                                    <a href="blog.html">Blog</a>
+    
+                                    |
+    
+                                    <a href="contact.html">Contact Us</a>
+                                </p>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-6">
+                            <div class="panel-body">
+                                <p class="text-right">
+                                    Copyright &copy; 2016 Ikusasa Technology Solutions.By
+    
+                                    <a href="www.ikusasatech.com" rel="develop">Ikusasa</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+        <script type="text/javascript" src="vendor/jquery.2.2.3.min.js"></script>
+        <script src='https://git.wimbarelds.nl/TimeCircles/inc/TimeCircles.js'></script>
+        <script type="text/javascript" src="vendor/bootstrap/bootstrap.min.js"></script>
+        <script src="vendor/revolution/jquery.themepunch.tools.min.js"></script>
+        <script src="vendor/revolution/jquery.themepunch.revolution.min.js"></script>
+        <script type="text/javascript" src="vendor/revolution/revolution.extension.slideanims.min.js"></script>
+        <script type="text/javascript" src="vendor/revolution/revolution.extension.layeranimation.min.js"></script>
+        <script type="text/javascript" src="vendor/revolution/revolution.extension.navigation.min.js"></script>
+        <script type="text/javascript" src="vendor/revolution/revolution.extension.kenburn.min.js"></script>
+        <script type="text/javascript" src="vendor/revolution/revolution.extension.actions.min.js"></script>
+        <script type="text/javascript" src="vendor/revolution/revolution.extension.video.min.js"></script>
+        <script type="text/javascript" src="vendor/owl-carousel/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="vendor/jquery.mixitup.min.js"></script>
+        <script type="text/javascript" src="vendor/skills-master/jquery.skills.js"></script>
+        <script type="text/javascript" src="js/theme.js"></script>
+        <script type="text/javascript" src="js/emailValidation.js"></script>
+        <script type="text/javascript" src="js/script-temp.js"></script>
+        <script type="text/javascript">
+            function add_chatinline() {
+                var hccid = 94367399;
+                var nt = document.createElement("script");
+                nt.async = true;
+                nt.src = "https://mylivechat.com/chatinline.aspx?hccid=" + hccid;
+                var ct = document.getElementsByTagName("script")[0];
+                ct.parentNode.insertBefore(nt, ct);
+            }
+            add_chatinline();
+        </script>
+        </div>
+    </body>
+    
+    </html>

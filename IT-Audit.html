@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" type="image/png" sizes="56x57" href="images/fav-icon/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><script src="vendor/html5shiv.js"></script><script src="vendor/respond.js"></script><![endif]-->
+    <link rel="manifest" href="/manifest.json">
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Weather PWA">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <link rel='stylesheet' href='http://git.wimbarelds.nl/TimeCircles/inc/TimeCircles.css'>
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#2b2835">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119321085-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-119321085-1');
+    </script>
+
+    <!-- Hotjar Tracking Code for www.ikusasatech.com -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 734512, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+</head>
+
+<body class="home-bg">
+    <div class="main-page-wrapper">
+        <!--=============================================Theme Header==============================================-->
+        <header class="theme-main-header">
+            <div class="container">
+                <a href="index.html" class="logo float-left tran4s">
+                    <img src="images/logo/logo.png" alt="ICT Consulting and Training">
+                </a>
+                <nav class="navbar float-right theme-main-menu one-page-menu">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1"
+                            aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>Menu
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="index.html">HOME</a>
+                            </li>
+                            <li>
+                                <a href="about.html">ABOUT</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" a:hover>TRAINING<span class="caret"></span></a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item div-drop" href="training.html">TRAINING COURSES</a><br>                                        
+                                    <a class="dropdown-item div-drop" href="Ikusasa - Public -Full Training Schedule.pdf">COURSE SCHEDULE</a>
+                                </div>
+                            </li>
+                            <li class="mega">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">CONSULTING<span class="caret"></span></a>
+                                <div class="dropdown-menu">
+                            <ul>
+                                <li>SMALL MEDIUM ENTERPRISE<span class="caret"></span>
+                                    <ul>
+                                        <li><a href="CompanyReg.html">Company Registration</a></li>
+                                        <li><a href="Branding & Graphic Design.html">Branding & Graphic Design</a></li>
+                                        <li><a href="webdev.html">Web Development</a></li>
+                                        <li><a href="onlinemarketing.html">Online Marketing</a></li>
+                                        <li><a href="hosting.html">Hosting</a></li>
+                                        <li><a href="support-maintanance.html">Support and Maintanence</a></li>
+                                        <li><a href="IT-Audit.html">IT Audit</a></li>
+                                    </ul>
+                                </li>
+                                <li>LARGE ENTERPRISE<span class="caret"></span>
+                                    <ul>
+                                        <li><a href="crm.html">Customer Relationship Management</a></li>
+                                        <li><a href="lms.html">Learning Management System</a></li>
+                                        <li><a href="intranet.html">Intranet</a></li>
+                                        <li><a href="onlinemarketing.html">Online Marketing</a></li>
+                                        <li><a href="support-maintanance.html">Support & Maintanence</a></li>
+                                        <li><a href="IT-Audit.html">IT Audit</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" a:hover>CONSULTING</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item div-drop" href="SEO.html">SMALL MEDIUM ENTERPRISE</a><br>                                        
+                                <a class="dropdown-item div-drop" href="OEM.html">LARGE ENTERPRISE</a>
+                            </div>-->
+                        </li> 
+                            <li class="dropdown-holder">
+                                <a href="blog.html">BLOG</a>
+
+                            </li>
+                            <li>
+                                <a href="contact.html">CONTACT</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!----End Header---->
+    </div>
+    <div class="theme-title">
+
+        <h4>IT-AUDIT</h4>
+        <p>IT audits are used to ensure information-related controls and processes are working properly.
+            Evaluate the systems and processes in place that secure company data. Determine risks to a company's
+            information assets, and help identify methods to minimize those risks. Ensure information management
+            processes are in compliance with IT-specific laws, policies and standards. Determine inefficiencies
+            in IT systems and associated management.
+        </p>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="hh6">
+                <h6>IT Infrastructure Audit</h6>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="iterm2">
+                    <img src="images/cabling-image.jpg" alt="multiple screen">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="iterm2">
+
+                    <p class="parag">An IT audit is to evaluate the system's
+                        internal control design and effectiveness against relevant
+                        standards and best practices. This includes but is not
+                        limited to, design, implementation, performance, efficiency,
+                        security protocols and IT governance or oversight. Installing
+                        controls are necessary but not sufficient to provide adequate
+                        security. Periodic review of the infrastructure and the
+                        processes is mandatory to ensure compliance to these controls.
+                        Ikusasa, in its role as an IT infrastructure consulting
+                        company has been responsible for building out and upgrading
+                        number of information technology infrastructure projects for
+                        its clients in India and Overseas. Our IT consulting staff is
+                        specially trained for assessment of network, data center,
+                        computer, storage and security solutions
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="iterm2">
+                    <img src="images/assurance.jpg" alt="multiple screen">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="iterm2">
+                    <img src="images/infrastructure1.jpg" alt="multiple screen">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="iterm2">
+                    <h6>IT Assurance Services</h6>
+                    <p class="parag">
+                        Assurance is the process of getting the right information to the
+                        right people at the right time with Information Risk Management,
+                        Trust Management, Resilience, appropriate Architecture, system safety, and security.
+                        Our professionals provide independent, pragmatic advice and advanced
+                        technology capabilities to help you proactively and reactively manage
+                        your technology risks and use the data to its full potential. Our
+                        Information Assurance services help customers secure their informations
+                        with 5 pillars of security namely Integrity, Availability, Authentication,
+                        Confidentiality, Nonrepudiation.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="iterm2">
+                    <h6>IT Infrastructure Assessment</h6>
+                    <p class="parag">
+                        IT assessment help Optimize IT resources through proper
+                        gauging of its strengths and weaknesses and help in right
+                        sizing, protection, effective utilization, scalability,
+                        stability, security, resilience, utilization of the right
+                        technology and achieve improved efficiency, performance and uptime.
+                        Ikusasa Infrastructure Assessment services takes structured and
+                        systematic approach in providing end to end support with proper
+                        understanding and alignment with the customer's requirement and expectation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="hh6">
+                <h6>IT Compliance Auditing</h6>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="iterm2">
+
+                    <p class="parag">
+                        Compliance is one of the greatest challenges faced by organizations today.
+                        Observing regulatory compliance audit policies is a requisite for every
+                        organization. Sensitive enterprise data is always at a risk of being
+                        compromised; therefore it has become a mandate to secure sensitive
+                        information by establishing network security processes and meeting the
+                        guidelines of regulatory bodies. Regulatory bodies also require
+                        organizations to retain log data, of their network devices
+                        and applications, for long periods. Ikusasa auditors
+                        authenticate security incidents by checking the audit trails from
+                        the log data. Organization can gain better insight into security
+                        threats, meet regulatory compliance requirements by monitoring
+                        and analyzing log data from all the network devices and applications and
+                        generate pre-defined/canned compliance reports such as PCI DSS, FISMA,
+                        GLBA, SOX, HIPAA, ISO 27001 etc. Generate generates compliance reports
+                        easily by monitoring your network and sensitive data in real-time.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="iterm2">
+                    <img src="images/Compliance-Monitoring (1).jpg" alt="multiple screen">
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="hh6">
+                <h6>Insider Attacks Audit</h6>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="iterm2">
+                    <img src="images/Insider Attacks.jpg" alt="multiple screen">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="iterm2">
+
+                    <p class="parag">
+                        Of all the cyber threats, the worst that could hit an organization
+                        lies within: the insider attack. Insider attacks earn their notoriety
+                        because they are extremely difficult to detect, especially when the
+                        attacker is a trusted and privileged user. Detection is next to
+                        impossible when the adversary is an IT worker with privileged access
+                        to the systems such as Active Directory. These attackers know the
+                        organization’s security policies inside out, which offers them the
+                        leverage to circumvent the security controls and cloak their incursions
+                        as something uneventful.
+                        <br>
+                        Ikusasa provides a search utility, which offers a consolidation of
+                        three different audit summaries, as listed below, for any user account
+                        (including Active Directory administrator) for a chosen period.<br>
+                        <ul>
+                            <li>1. Actions by the account.</li>
+                            <li>2. Logon history of the account</li>
+                            <li>3.Object history.</li>
+                        </ul>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <center> <a href="contact.html#send-msg" class="glowing-button audit-quote">Get A Quote
+        </a>
+        </p>
+    </center>
+
+    <!---Footer---->
+    <footer>
+        <div class="container">
+            <div class="row footer">
+                <div class="footerbottom">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footerwidget">
+                            <h6>Our Partners in Business</h6>
+
+                            <div class="menu-course">
+                                <ul class="menu">
+                                    <li>
+                                        <a href="http://www.dsbd.gov.za/" target="_blank">
+                                            The Department of Small Business Development
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://www.l2b.co.za" target="_blank">ABIOT Projects Consultants</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="http://mightycomms.co.za/" target="_blank">Mightycomms</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://www.geekulcha.com/" target="_blank">Geekulcha</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" target="_blank">NovaTech</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="http://katzconsulting.co.za/" target="_blank">Katz Consulting</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" target="_blank">Intergrated Taxi Services</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" target="_blank">Transformer SA</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footerwidget">
+                            <h6>Careers</h6>
+
+                            <div class="menu-course">
+                                <ul class="menu">
+                                    <li>
+                                        <a href="apply.html">Learnerships</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="apply.html">Interships</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="apply.html">Jobs</a>
+                                    </li>
+                                    <div class="modal fade" id="vacant" tabindex="-1" role="dialog" aria-labelledby="comptia"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Application for
+                                                        Vacant</h5>
+
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+
+                                                <div class="modal-body">
+                                                    <h3>Please email us your CV to recruitment@ikusasatech.com</h3>
+
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="footerwidget">
+                        <h6>Contact</h6>
+
+                        <p>Feel free contact us</p>
+
+                        <div class="contact-info">
+                            <i class="fa fa-map-marker"></i>
+                            : 563 Old Pretoria Rd, Midrand, Johannesburg, 1685
+
+                            <br>
+                            <i class="fa fa-phone"></i>
+                            : +2711 025 8267/6806
+                            <br>
+                            <i class="fa fa-envelope-o"></i>
+                            : info@ikusasatech.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="footerwidget">
+                        <h6>Social Media</h6>
+
+                        <div class="footer-social-icons">
+                            <h4 class="_14">Follow us on</h4>
+                            <ul class="social-icons">
+                                <li><a href="https://www.facebook.com/IkusasaTech" target="_blank" class="social-icon">
+                                        <i class="fa fa-facebook"></i></a></li>
+                                <li><a href="http://twitter.com/IkusasaTech" target="_blank" class="social-icon"> <i
+                                            class="fa fa-twitter"></i></a></li>
+                                <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://www.instagram.com/ikusasatechsolutions/" target="_blank" class="social-icon">
+                                        <i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/ikusasa-technology-solutions/" target="_blank"
+                                        class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://plus.google.com/u/1/103307629887413770234" target="_blank" class="social-icon">
+                                        <i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel-body">
+                            <p class="simplenav">
+                                <a href="index.html">Home</a>
+
+                                |
+
+                                <a href="about.html">About Us</a>
+
+                                |
+
+                                <a href="consulting.html">Consulting</a>
+
+                                |
+
+                                <a href="training.html">Training</a>
+
+                                |
+
+                                <a href="blog.html">Blog</a>
+
+                                |
+
+                                <a href="contact.html">Contact Us</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="panel-body">
+                            <p class="text-right">
+                                Copyright &copy; 2016 Ikusasa Technology Solutions.By
+
+                                <a href="www.ikusasatech.com" rel="develop">Ikusasa</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="vendor/jquery.2.2.3.min.js"></script>
+    <script src='https://git.wimbarelds.nl/TimeCircles/inc/TimeCircles.js'></script>
+    <script type="text/javascript" src="vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="vendor/revolution/jquery.themepunch.tools.min.js"></script>
+    <script src="vendor/revolution/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="vendor/revolution/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="vendor/revolution/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="vendor/revolution/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="vendor/revolution/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="vendor/revolution/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="vendor/revolution/revolution.extension.video.min.js"></script>
+    <script type="text/javascript" src="vendor/owl-carousel/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="vendor/jquery.mixitup.min.js"></script>
+    <script type="text/javascript" src="vendor/skills-master/jquery.skills.js"></script>
+    <script type="text/javascript" src="js/theme.js"></script>
+    <script type="text/javascript" src="js/emailValidation.js"></script>
+    <script type="text/javascript" src="js/script-temp.js"></script>
+    <script type="text/javascript">
+        function add_chatinline() {
+            var hccid = 94367399;
+            var nt = document.createElement("script");
+            nt.async = true;
+            nt.src = "https://mylivechat.com/chatinline.aspx?hccid=" + hccid;
+            var ct = document.getElementsByTagName("script")[0];
+            ct.parentNode.insertBefore(nt, ct);
+        }
+        add_chatinline();
+    </script>
+    </div>
+</body>
+
+</html>
