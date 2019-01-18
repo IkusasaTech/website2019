@@ -54,7 +54,9 @@
 /*----------------------------------------
  12.Testimonial Area Css
 ----------------------------------------*/
-
+.timeline-Footer{
+  display: none !important;
+}
 .testimonials-area {
   background: rgba(0, 0, 0, 0) url("images/home/1.jpg") no-repeat fixed center top / cover;
   height: auto;
