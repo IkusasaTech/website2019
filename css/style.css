@@ -2204,14 +2204,8 @@ Consulting
   width: 200px;
 }
 .mega li:hover{
-  display: block;
-  
+  display: block;  
 }
-
-
-
-
-
 
 @-webkit-keyframes glowing {
   0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }

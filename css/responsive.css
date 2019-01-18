@@ -64,6 +64,13 @@
 /*(min-width: 768px) and (max-width: 991px)*/
 
 @media (max-width: 767px) {
+  .mega ul ul{
+    display: block;
+    height: 300px;
+    position: relative;
+    left: -193px;
+    margin: 39px;
+  }
   .main{
     margin-left: -50px;
     margin-top: 100px;
