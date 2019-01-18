@@ -8,7 +8,9 @@ Mega- Menu Link
 /*---------------------
    Testimonial carousel
   ---------------------*/
-  
+  $('.sme').on('click',function(){
+    window.location.href = 'SEO.html';
+  });
   var test_carousel = $('.testimonial-carousel');
   test_carousel.owlCarousel({
     loop: true,
