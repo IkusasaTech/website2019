@@ -2205,7 +2205,31 @@ Consulting
 }
 .mega li:hover{
   display: block;  
+}/****
+==============================================
+TRAINING DROPDOWN
+==============================================
+*/
+.dropdown-menu a ul{
+ margin-left: 150px;
+  display: none;
+ 
 }
+.dropdown-menu a:hover ul{
+  display: block;
+  height: 10px;
+  width: 10px;
+  float: left;
+  background-color: white;
+}
+.dropdown-menu a ul li{
+
+  background-color: white;
+  height: 10px;
+  width: 10px;
+
+}
+
 
 @-webkit-keyframes glowing {
   0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }

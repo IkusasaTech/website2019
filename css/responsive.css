@@ -65,7 +65,7 @@
 
 @media (max-width: 767px) {
   .mega ul ul{
-    display: block;
+    display: none;
     height: 300px;
     position: relative;
     left: -193px;
