@@ -107,8 +107,9 @@ $('.get-more').on('click', function () {
   $('.get-more').addClass('hide');
   $('.more-about').removeClass('hide');
 });
-$('.ibm-card,.ibm-ref').on('click', function () {
-
+$('.ibm-card').on('click', function () {
+  $('.microsoft-section,.dmi-section,.comptia-section,.business-section').addClass('hide');
+  $('.ibm-section').removeClass('hide');
   $('.footer-bottom').addClass('hide');
   $('.modal-title').text('IBM BOOKING');
   $('.train-side').removeClass('hide');
