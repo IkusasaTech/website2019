@@ -2360,7 +2360,7 @@ input:checked + .slider:before {
 }
 
 .container_modal .theme-title{
-  background: white;
+  background: #d9edfe;
   width: 100%;
   height: 500px;
   padding-top: 0px;
@@ -2368,6 +2368,9 @@ input:checked + .slider:before {
 .modal_qoute{
   margin-left: 5px;
   background: #004A7F;
+}
+.modal-mt{
+  margin-top: 110px;
 }
 .glowing-button website-quote{
   margin-top: 30px;
