@@ -516,6 +516,7 @@ ul.social-icons {
 
 .main {
   margin-top: 12%; /* Same as the width of the sidenav */
+  margin-left: 5%;
 }
 
 @media screen and (max-height: 450px) {
