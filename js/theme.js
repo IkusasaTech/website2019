@@ -830,3 +830,31 @@ jQuery(window).on('scroll', function () {
     }
   };})();
 
+/**
+ * SEARCH FILTER FUNCTION
+ */
+
+ 
+$("#searchInput").on('keyup', function() {
+  var searchValue = $(this).val();
+  searchAndFilter(searchValue)
+});
+
+function searchAndFilter(searchTerm) {
+  if (searchTerm == '') {
+    $("#fruits li").hide()
+  } else {
+    $("#fruits li").each(function() {
+      var currentText = $(this).text();
+      currentText = currentText.toUpperCase();
+      searchTerm = searchTerm.toUpperCase();
+      if (currentText.indexOf(searchTerm) >= 0) {
+        $(this).show();
+      }
+    });
+  }
+}
+
+$(document).ready(function() {
+  $("#fruits li").hide();
+});
