@@ -2289,12 +2289,8 @@ h3{
     transition: all 1s ease-out;
 }
 
-.text{
-    margin:20px 0px;
-}
-
-.fa{
-     
+#fruits{
+  border-style: groove;
 }
 
 /*

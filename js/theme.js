@@ -835,26 +835,32 @@ jQuery(window).on('scroll', function () {
  */
 
  
-$("#searchInput").on('keyup', function() {
-  var searchValue = $(this).val();
-  searchAndFilter(searchValue)
-});
-
-function searchAndFilter(searchTerm) {
-  if (searchTerm == '') {
-    $("#fruits li").hide()
-  } else {
-    $("#fruits li").each(function() {
-      var currentText = $(this).text();
-      currentText = currentText.toUpperCase();
-      searchTerm = searchTerm.toUpperCase();
-      if (currentText.indexOf(searchTerm) >= 0) {
-        $(this).show();
-      }
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
-  }
-}
+  });
 
-$(document).ready(function() {
-  $("#fruits li").hide();
+  var myObj = [{"jobRole": "Snr Network Administrator","jobDiscription":
+{"companyName":"Ikusasa Tech","position":"Admin","contract":" Permanet","salary":"340000"}},
+    {"jobRole": "Java Developer","jobDiscription":
+{"companyName":"Impilo Consulting","position":"Junior Web Developer","contract":" Permanet","salary":"440000"}}];
+
+//for(x = 0;x < 2;x++){
+  var jobRole = myObj[0].jobRole;
+  var companyName = myObj[0].jobDiscription.companyName;
+  var position = myObj[0].jobDiscription.position; 
+  var salary = myObj[0].jobDiscription.salary;
+  var contract = myObj[0].jobDiscription.contract;
+//}
+
+document.getElementById("jobRole").innerHTML = jobRole;
+document.getElementById("companyName").innerHTML = companyName;
+document.getElementById("position").innerHTML = position;
+document.getElementById("contract").innerHTML = contract;
+document.getElementById("salary").innerHTML = salary;
+
+console.log(jobRole + " " + companyName + " " + position + " " + contract + " " + salary);
 });
