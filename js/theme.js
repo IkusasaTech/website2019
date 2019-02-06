@@ -842,9 +842,29 @@ $(document).ready(function(){
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
+  
+  myObj = [
+    {
+    job:{
+      "companyName":"Impilo Consulting",
+      "position":"Junior Web Developer",
+      "contract":" Permanet",
+      "salary":"440000"}
+    
+  },
+  {
+    job:{
+      "companyName":"Ikusasa Tech",
+      "position":"Admin",
+      "contract":" Permanet",
+      "salary":"340000"}
+    
+  }
+  ]
+  document.getElementById('').innerHTML = job;
+  
 
-  var myObj = [{"jobRole": "Snr Network Administrator","jobDiscription":
-{"companyName":"Ikusasa Tech","position":"Admin","contract":" Permanet","salary":"340000"}},
+  var myObj = [
     {"jobRole": "Java Developer","jobDiscription":
 {"companyName":"Impilo Consulting","position":"Junior Web Developer","contract":" Permanet","salary":"440000"}}];
 
@@ -854,13 +874,55 @@ $(document).ready(function(){
   var position = myObj[0].jobDiscription.position; 
   var salary = myObj[0].jobDiscription.salary;
   var contract = myObj[0].jobDiscription.contract;
+  
 //}
 
-document.getElementById("jobRole").innerHTML = jobRole;
-document.getElementById("companyName").innerHTML = companyName;
-document.getElementById("position").innerHTML = position;
-document.getElementById("contract").innerHTML = contract;
-document.getElementById("salary").innerHTML = salary;
+document.getElementById("jobRole").innerHTML = jobRole,
+document.getElementById("companyName").innerHTML = companyName,
+document.getElementById("position").innerHTML = position,
+document.getElementById("contract").innerHTML = contract,
+document.getElementById("salary").innerHTML = salary
 
-console.log(jobRole + " " + companyName + " " + position + " " + contract + " " + salary);
+console.log(myObj[3](jobRole + " ", + companyName + " ", + position + " ", + contract + " ", + salary));
 });
+
+
+/**
+ * <div class="container">
+  
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">View more</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+       
+        <div class="modal-body">
+        <h5>Job Advert</h5>
+          <p>Company Name: IkusasaTechnology Solutions<br>Position : Junior Front- End developer<br>Contract : Permanant<br> Salary: Negotiable<br><br><br><u>RESPONSIBILITIES:</u><br>
+          <ul>
+          <li>Software Design</li>
+          <li>Perform detailed systems analysis and software design</li>
+          <li>Ensure design fits in with business requirements</li>
+          <li>Identify possible test scenarios</li>
+          
+          </ul>
+          <br>
+          <u>Development:</u><br>
+          <ul>
+          <li>Maintain knowledge and keep abreast of  latest technology trends</li>
+          <li>Implementation of latest technologies</li>
+          <li>Adhere to all Development Processes and Procedures</li>
+          <li>Responsible for Custom Development</li>
+          <li>Assist and review User Documentation as required</li>
+          <li>Lead software development projects by providing assistance, coaching and mentoring to project team</li>
+          <li>Document API interfaces as required</li>
+          
+          
+          </ul>
+ * 
+ * 
+ * 
+ * 
+ */

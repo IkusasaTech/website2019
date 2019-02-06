@@ -2249,6 +2249,9 @@ Consulting
  
   padding: top 0;
 }
+description{
+  background-color: red;
+}
 /*
 Recruitment-social cards
 */
