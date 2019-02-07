@@ -292,11 +292,85 @@
         </div>
     </div>
     <br>
-    <center> <a href="contact.html#send-msg" class="glowing-button audit-quote">Get A Quote
-        </a>
-        </p>
+<!--====Modal====-->
+<div class="container_modal">
+    <!-- Trigger the modal with a button -->
+    <center>
+        <button type="button" class="glowing-button online-quote" data-toggle="modal" data-target="#myModal">Get Quote</button>
     </center>
 
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="theme-title">
+                        <div id="quotecalculator">
+                            <div id="cats">
+                                <label class="justalabel">Infrastructure :</label>
+                                <label class="justalabel">Assurance :</label>
+                                <label class="justalabel">Infrastructure :</label>
+                                <label class="justalabel">Complience:</label>
+                                <label class="justalabel">Email Hosting:</label>
+                                <label class="justalabel">Inside Attack :</label>
+                                <label class="justalabel">Total:</label>
+                            </div>
+                            <!--ENDS CATS-->
+                            <div id="toggles">
+                                <select id="typeH" name="type" value="type">
+                                    <option value="0">Select Company Type</option>
+                                    <option value="1">Personal/Small Business</option>
+                                    <option value="2">E-Commerse/Mid-Sized Business</option>
+                                    <option value="3">Custom Project/Large Business</option>
+                                </select>
+                                <!--ENDS TYPE-->
+                                <label id="optionwebsiteH" class="switch">
+                                    <input id="optionwebsiteH" type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                                <!--ENDS OPTION Website-->
+                                <label id="optionapplicationH" class="switch">
+                                    <input id="optionapplicationH" type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                                <!--ENDS OPTIONS Application-->
+                                <label id="optiondomainH" class="switch">
+                                    <input id="optiondomainH" type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                                <!--ENDS OPTION Domain-->
+                                <label id="optionemailH" class="switch">
+                                    <input id="optionemailH" type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                                <!--ENDS OPTION Email-->
+                                <label id="optionsslH" class="switch">
+                                    <input id="optionsslH" type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                                <!--ENDS OPTION SSL-->
+                                <label id="totalestimateH">R0</label>
+                            </div>
+                            <!--ENDS TOGGLES-->
+                        </div>
+                        <!--ENDS QUOTE CALCULATOR-->
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>
+<!--====End Modal====-->  
     <!---Footer---->
     <footer>
         <div class="container">

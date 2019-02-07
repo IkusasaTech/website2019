@@ -195,4 +195,170 @@ function getTotalH() {
  finalPriceH = (totalPriceH + priceTypeH);
  finalPriceH = Math.round(finalPriceH);
  $("#totalestimateH").html("R" + finalPriceH);
+};
+/*
+============================================
+Branding & Design Quote
+============================================
+*/
+var optionwebsiteB = false;
+var optionplanningB = false;
+var optionlogoB = false;
+var optiondesignB = false;
+var priceTypeB = 0;
+var totalPriceB = 0;
+var finalPriceB = 0;
+alert();
+//SITE TYPE
+$("#typeB").on("change", function() {
+  console.log("here");
+  var selectedTypeB = $("#typeB option:selected").val();
+  if (selectedTypeB == 0) {
+    priceTypeB = 0;
+  } else if (selectedTypeB == 1) {
+    priceTypeB = 400;
+  } else if (selectedTypeB == 2) {
+    priceTypeB = 600;
+  } else if (selectedTypeB == 3) {
+    priceTypeB = 1000;
+  }
+  getTotalB();
+});
+//website
+$("label #optionwebsiteB").on("click", function() {
+  if (optionwebsiteB == false) {
+  totalPriceB += 50;
+  optionwebsiteB = true;
+} else {
+  totalPriceB -= 50;
+  optionwebsiteB = false;
+}
+getTotalB();
+});
+//Planning
+$("label #optionplanningB").on("click", function() {
+  if (optionplanningB == false) {
+  totalPriceB += 100;
+  optionplanningB = true;
+} else {
+  totalPriceB -= 100;
+  optionplanningB = false;
+}
+getTotalB();
+});
+//LOGO
+$("label #optionlogoB").on("click", function() {
+  if (optionlogoB == true) {
+  totalPriceB += 50;
+  optionlogoB = false;
+} else {
+  totalPriceB -= 50;
+  optionlogoB = true;
+}
+getTotalB();
+});
+//DESIGN
+$("label #optiondesignB").on("click", function() {
+  if (optiondesignB == true) {
+  totalPriceB += 50;
+  optiondesignB = false;
+} else {
+  totalPriceB -= 50;
+  optiondesignB = true;
+}
+getTotalB();
+});
+function getTotalB() {
+ finalPriceB = (totalPriceB + priceTypeB);
+ finalPriceB = Math.round(finalPriceB);
+ $("#totalestimateB").html("R" + finalPriceB);
+};
+/*
+=====================================
+Web Online Marketing quote
+=====================================
+*/
+var optionseoO = true;
+var optionpayperclickO = true;
+var optionsocialmediamarketingO = true;
+var optioncontentmarketingO = true;
+var totalPriceO = 0;
+var priceTypeO = 0;
+var pricePagesO = 0;
+var finalPriceO = 0;
+//SITE TYPE
+$("#type").on("change", function() {
+  var selectedTypeO = $("#type option:selected").val();
+  if (selectedTypeO == 0 || selectedTypeO == null) {
+    priceTypeO = 0;
+  } else if (selectedTypeO == 1) {
+    priceTypeO = 400;
+  } else if (selectedTypeO == 2) {
+    priceTypeO = 600;
+  } else if (selectedTypeO == 3) {
+    priceTypeO = 1000;
+  }
+  getTotalO();
+});
+//SEO
+$("label #optionseoO").on("click", function() {
+  if (optionseoO == true) {
+    totalPriceO += 100;
+    optionseoO = false;
+  } else {
+    totalPriceO -= 100;
+    optionseoO = true;
+  }
+  getTotalO();
+});
+//ONLINE STORE
+$("label #optionstore").on("click", function() {
+    if (optionstore == true) {
+    totalPrice += 350;
+    optionstore = false;
+  } else {
+    totalPrice -= 350;
+    optionstore = true;
+  }
+  getTotal();
+});
+//SEO
+$("label #optionseo").on("click", function() {
+    if (optionseo == true) {
+    totalPrice += 100;
+    optionseo = false;
+  } else {
+    totalPrice -= 100;
+    optionseo= true;
+  }
+  getTotal();
+});
+//GOOGLE ANALYTICS
+$("label #optiongoogle").on("click", function() {
+    if (optiongoogle == true) {
+    totalPrice += 50;
+    optiongoogle = false;
+  } else {
+    totalPrice -= 50;
+    optiongoogle = true;
+  }
+  getTotal();
+});
+//SOCIAL MEDIA
+$("label #optionsocial").on("click", function() {
+    if (optionsocial == true) {
+    totalPrice += 60;
+    optionsocial = false;
+  } else {
+    totalPrice -= 60;
+    optionsocial = true;
+  }
+  getTotal();
+});
+
+function getTotalO() {
+  console.log("FunctionO " + pricePagesO);
+  finalPriceO = totalPriceO + priceTypeO + pricePagesO; //calculates the total price based on the options
+  finalPriceO = Math.round(finalPriceO); //ensures that the price is a whole number
+  $("#totalestimateO").html("R" + finalPriceO); //adds the price to the user interface
 }
