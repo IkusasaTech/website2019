@@ -526,3 +526,64 @@ function getTotal() {
   finalPrice = Math.round(finalPrice); //ensures that the price is a whole number
   $("#totalestimate").html("R" + finalPrice); //adds the price to the user interface
 }
+
+
+
+
+/*
+=====================================
+IT- AUDIT QOUTE
+=====================================
+*/
+var optionassuranceT = true;
+var optioninfrastructureT = true;
+var optioncomplainceT = true;
+var optionattackT = true;
+var totalPriceT = 0;
+var priceTypeT = 0;
+var finalPriceT = 0;
+//SITE TYPE
+alert;
+$("#typeT").on("change", function() {
+  var selectedTypeT = $("#type option:selected").val();
+  if (selectedTypeT == 0 || selectedType == null) {
+    priceTypeT = 0;
+  } else if (selectedTypeT == 1) {
+    priceTypeT = 400;
+  } else if (selectedTypeT == 2) {
+    priceTypeT = 600;
+  } else if (selectedTypeT == 3) {
+    priceTypeT = 1000;
+  }
+  getTotalT();
+});
+//SITE Assurance TYPE
+$("label #optionassuranceT").on("click", function() {
+  if (optionassuranceT == true) {
+    totalPriceT = 100;
+    optionassuranceT = false;
+  } else {
+    totalPriceT -= 100;
+    optionassuranceT = true;
+  }
+  getTotalT();
+});
+
+//Infrastructure
+$("label #optionattackT").on("click", function() {
+  if (optioninattackT == true) {
+    totalPriceT = 100;
+    optionattackT = false;
+  } else {
+    totalPriceT -= 100;
+    optionattackT = true;
+  }
+  getTotalT();
+});
+//SOCIAL MEDIA
+function getTotalT() {
+  console.log("Function " + priceTypeT);
+  finalPriceT = totalPriceT + priceTypeT; //calculates the total price based on the options
+  finalPriceT = Math.round(finalPriceT); //ensures that the price is a whole number
+  $("#totalestimate").html("R" + finalPriceT); //adds the price to the user interface
+}
