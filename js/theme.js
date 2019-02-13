@@ -542,54 +542,51 @@ function partnersLogo() {
 
 
 //Contact Form Validation
-function contactFormValidation() {
-  var activeForm = $('.form-validation');
-  if (activeForm.length) {
-    activeForm.validate({ // initialize the plugin
-      rules: {
-        Fname: {
-          required: true
-        },
-        Lname: {
-          required: true
-        },
-        email: {
-          required: true,
-          email: true
-        },
-        sub: {
-          required: true
-        },
-        message: {
-          required: true
-        }
-      },
-      submitHandler: function (form) {
-        $(form).ajaxSubmit({
-          success: function () {
-            $('.form-validation :input').attr('disabled', 'disabled');
-            activeForm.fadeTo("slow", 1, function () {
-              $(this).find(':input').attr('disabled', 'disabled');
-              $(this).find('label').css('cursor', 'default');
-              $('#alert-success').fadeIn();
-            });
-          },
-          error: function () {
-            activeForm.fadeTo("slow", 1, function () {
-              $('#alert-error').fadeIn();
-            });
-          }
-        });
-      }
-    });
+jQuery(document).on('ready', function () {
+
+  var form = $('.contact__form'),
+      message = $('.contact__msg'),
+      form_data;
+  // Success function
+  function done_func(response) {
+      
+      message.fadeIn().removeClass('alert-danger').addClass('alert-success');
+      message.text(response);
+      setTimeout(function () {
+          message.fadeOut();
+      }, 2000);
+      form.find('input:not([type="submit"]), textarea').val('');
+      return false;
   }
-}
+  // fail function
+  function fail_func(data) {
+      message.fadeIn().removeClass('alert-success').addClass('alert-success');
+      message.text(data.responseText);
+      setTimeout(function () {
+          message.fadeOut();
+      }, 2000);
+      return false;
+  }
+  
+  form.submit(function (e) {
+      e.preventDefault();
+      form_data = $(this).serialize();
+      $.ajax({
+          type: 'POST',
+          url: 'email.php',
+          data: form_data
+      })
+      .done(done_func)
+      .fail(fail_func);
+  });
+ 
+});
 
 // Close suddess Alret
 function closeSuccessAlert() {
   var closeButton = $(".closeAlert");
   if (closeButton.length) {
-    closeButton.on('click', function () {
+    closeButton.on('click', function  () {
       $(".alert-wrapper").fadeOut();
     });
     closeButton.on('click', function () {
@@ -633,7 +630,7 @@ function subMenuExpend() {
 
 // DOM ready function
 jQuery(document).on('ready', function () {
-  (function ($) {
+
     removePlaceholder();
     scrollToTop();
     BannerVideoSlider();
@@ -646,15 +643,13 @@ jQuery(document).on('ready', function () {
     closeSuccessAlert();
     cladendar();
     subMenuExpend()
-  })(jQuery);
+ 
 });
 
 
 // Window scroll function
 jQuery(window).on('scroll', function () {
-  (function ($) {
     stickyHeader()
-  })(jQuery);
 });
 
 (function(){

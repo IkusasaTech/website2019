@@ -36,6 +36,7 @@
   .blog-details-post-wrapper>.row p {margin-bottom: 30px;}
   .main {
     margin-top: 25%; /* Same as the width of the sidenav */
+    margin-left: 5%;
   }
 }
 /*(max-width: 991px)*/
