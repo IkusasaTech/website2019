@@ -206,9 +206,11 @@ var optionplanningB = false;
 var optionlogoB = false;
 var optiondesignB = false;
 var priceTypeB = 0;
+var pricePagesB = 0;
 var totalPriceB = 0;
+var pricePagesC = 0;
 var finalPriceB = 0;
-alert();
+
 //SITE TYPE
 $("#typeB").on("change", function() {
   console.log("here");
@@ -224,6 +226,44 @@ $("#typeB").on("change", function() {
   }
   getTotalB();
 });
+
+// NUMBER OF PAGES
+$("#pagesB").on("change", function() {
+  var selectedPagesB = $("#pagesB option:selected").val();
+  if (selectedPagesB == 0) {
+    pricePagesB = 0;
+  } else if (selectedPagesB == 1) {
+    pricePagesB = 200;
+  } else if (selectedPagesB == 2) {
+    pricePagesB = 300 ;
+  } else if (selectedPagesB == 3) {
+    pricePagesB = 400;
+  } else if (selectedPagesB == 4) {
+    pricePagesB = 500;
+  } else if (selectedPagesB == 5) {
+    pricePagesB = 600;
+  }
+  getTotalB();
+});
+// NUMBER OF PAGES
+$("#pagesB").on("change", function() {
+  var selectedPagesC = $("#pagesB option:selected").val();
+  if (selectedPagesC == 6) {
+    pricePagesB = 0;
+  } else if (selectedPagesC == 7) {
+    pricePagesC = 200;
+  } else if (selectedPagesB == 8) {
+    pricePagesC = 300 ;
+  } else if (selectedPages == 9) {
+    pricePagesC = 400;
+  } else if (selectedPagesC == 10) {
+    pricePagesC = 500;
+  } else if (selectedPagesC == 11) {
+    pricePagesC = 600;
+  }
+  getTotalC();
+});
+alert("Sompisi");
 //website
 $("label #optionwebsiteB").on("click", function() {
   if (optionwebsiteB == false) {
@@ -248,28 +288,35 @@ getTotalB();
 });
 //LOGO
 $("label #optionlogoB").on("click", function() {
-  if (optionlogoB == true) {
+  if (optionlogoB == false) {
   totalPriceB += 50;
-  optionlogoB = false;
+  optionlogoB = true;
 } else {
   totalPriceB -= 50;
-  optionlogoB = true;
+  optionlogoB = false;
 }
 getTotalB();
 });
 //DESIGN
 $("label #optiondesignB").on("click", function() {
-  if (optiondesignB == true) {
+  if (optiondesignB == false) {
   totalPriceB += 50;
-  optiondesignB = false;
+  optiondesignB = true;
 } else {
   totalPriceB -= 50;
-  optiondesignB = true;
+  optiondesignB = false;
 }
 getTotalB();
 });
 function getTotalB() {
- finalPriceB = (totalPriceB + priceTypeB);
+  console.log("Function" + pricePagesB + pricePagesB)
+ finalPriceB = (totalPriceB + priceTypeB + pricePagesB + pricePagesB);
+ finalPriceB = Math.round(finalPriceB);
+ $("#totalestimateB").html("R" + finalPriceB);
+};
+function getTotalC() {
+  console.log("Function" + pricePagesC + pricePagesC)
+ finalPriceB = (totalPriceB + priceTypeB + pricePagesC + pricePagesC);
  finalPriceB = Math.round(finalPriceB);
  $("#totalestimateB").html("R" + finalPriceB);
 };
