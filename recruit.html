@@ -179,130 +179,530 @@
         <br>
         <br>
         <div class="container">
-
-
-            <div class="row">
-                <div class="recruit-tab col-lg-6 col-md-6 col-sm-12">
-                    <img src="images/recruitpic1.jpg" alt="Trulli" width="700" height="200">
-                </div>
-                <div class="recruit-tab2 col-lg-6 col-md-6 col-sm-12" width="700" height="200">
-
-                </div>
+                <!DOCTYPE html>
+                <html>
+                <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style>
+                * {
+                  box-sizing: border-box;
+                }
+                
+                #myInput {
+                  background-image: url('/css/searchicon.png');
+                  background-position: 10px 10px;
+                  background-repeat: no-repeat;
+                  width: 100%;
+                  font-size: 16px;
+                  padding: 12px 20px 12px 40px;
+                  border: 1px solid #ddd;
+                  margin-bottom: 12px;
+                }
+                
+                #myTable {
+                  border-collapse: collapse;
+                  width: 100%;
+                  border: 1px solid #ddd;
+                  font-size: 18px;
+                }
+                
+                #myTable th, #myTable td {
+                  text-align: left;
+                  padding: 12px;
+                }
+                
+                #myTable tr {
+                  border-bottom: 1px solid #ddd;
+                }
+                
+                #myTable tr.header, #myTable tr:hover {
+                  background-color: #f1f1f1;
+                }
+                </style>
+                </head>
+                <body>
+                <div class="h2">
+                <h2>My Customers</h2>
             </div>
-            <div class="box-box">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                    </div>
+                    </div>
 
-                            <div class="box-part text-center">
+                  <div class="row">
+                      <div class="col-lg-12 col-md-12 col-sm-12">
+                            
+                                    <table id="myTable">
+                                            <tr class="header">
+                                              <th style="width:60%;">Available jobs</th>
+                                              <th style="width:40%;">More Details</th>
+                                            </tr>
+                                            <tr>
+                                              <td>Junior Front- End developer</td>
+                                              <td>
+                                                  <!-- Trigger the modal with a button -->
+          <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">View more</button>
+        
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+               
+                <div class="modal-body">
+                <h5>Job Advert</h5>
+                  <p>Company Name: IkusasaTechnology Solutions<br>Position : Junior Front- End developer<br>Contract : Permanant<br> Salary: Negotiable<br><br><br><u>RESPONSIBILITIES:</u><br>
+                  <ul>
+                  <li>Software Design</li>
+                  <li>Perform detailed systems analysis and software design</li>
+                  <li>Ensure design fits in with business requirements</li>
+                  <li>Identify possible test scenarios</li>
+                  
+                  </ul>
+                  <br>
+                  <u>Development:</u><br>
+                  <ul>
+                  <li>Maintain knowledge and keep abreast of  latest technology trends</li>
+                  <li>Implementation of latest technologies</li>
+                  <li>Adhere to all Development Processes and Procedures</li>
+                  <li>Responsible for Custom Development</li>
+                  <li>Assist and review User Documentation as required</li>
+                  <li>Lead software development projects by providing assistance, coaching and mentoring to project team</li>
+                  <li>Document API interfaces as required</li>
+                  
+                  
+                  </ul>
+                  <u>Required Skills</u>
+                  <ul>
+                 <li>css : 1 to 2 years</li>
+                  <li>html : 1 to 2 years</li>
+                  <li>javascript : 1 to 2 years</li>
+                  <li>jquery : 1 to 2 years</li>
+                  <li>sql : 1 to 2 years</li>
+                 
+                </ul>
+                      </div>
+                 
 
-                                <center>
-                                    <img src="images/cv-upload.jpg" alt="Here you login">
-                                </center>
+                    
 
-                                <div class="title">
-                                    <h4>UPLOAD YOUR CV</h4>
-                                </div>
+          <p>
+              
+          </p>
+                                          
+                  
+                                      </td>
+                                      
+                                    </tr>
+                                    <tr>
+                                      <td>Berglunds snabbkop</td>
+                                      <td>
+                                            <!-- Trigger the modal with a button -->
+    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">View more</button>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+         
+          <div class="modal-body">
+          <h5>Job Advert</h5>
+            <p>Company Name: IkusasaTechnology Solutions<br>Position : Junior Front- End developer<br>Contract : Permanant<br> Salary: Negotiable<br><br><br><u>RESPONSIBILITIES:</u><br>
+            <ul>
+            <li>Software Design</li>
+            <li>Perform detailed systems analysis and software design</li>
+            <li>Ensure design fits in with business requirements</li>
+            <li>Identify possible test scenarios</li>
+            
+            </ul>
+            <br>
+            <u>Development:</u><br>
+            <ul>
+            <li>Maintain knowledge and keep abreast of  latest technology trends</li>
+            <li>Implementation of latest technologies</li>
+            <li>Adhere to all Development Processes and Procedures</li>
+            <li>Responsible for Custom Development</li>
+            <li>Assist and review User Documentation as required</li>
+            <li>Lead software development projects by providing assistance, coaching and mentoring to project team</li>
+            <li>Document API interfaces as required</li>
+            
+            
+            </ul>
+            <u>Required Skills</u>
+            <ul>
+           <li>css : 1 to 2 years</li>
+            <li>html : 1 to 2 years</li>
+            <li>javascript : 1 to 2 years</li>
+            <li>jquery : 1 to 2 years</li>
+            <li>sql : 1 to 2 years</li>
+           
+          </ul>
+                </div>
+           
 
-                                <div class="text">
-                                    <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta
-                                        ocurreret qui ad.</span>
-                                </div>
+              
 
-                                <a href="#">Learn More</a>
+    <p>
+        
+    </p>
+                                    
+            
+                                </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Island Trading</td>
+                                      <td>
+                                            <!-- Trigger the modal with a button -->
+    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">View more</button>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+         
+          <div class="modal-body">
+          <h5>Job Advert</h5>
+            <p>Company Name: IkusasaTechnology Solutions<br>Position : Junior Front- End developer<br>Contract : Permanant<br> Salary: Negotiable<br><br><br><u>RESPONSIBILITIES:</u><br>
+            <ul>
+            <li>Software Design</li>
+            <li>Perform detailed systems analysis and software design</li>
+            <li>Ensure design fits in with business requirements</li>
+            <li>Identify possible test scenarios</li>
+            
+            </ul>
+            <br>
+            <u>Development:</u><br>
+            <ul>
+            <li>Maintain knowledge and keep abreast of  latest technology trends</li>
+            <li>Implementation of latest technologies</li>
+            <li>Adhere to all Development Processes and Procedures</li>
+            <li>Responsible for Custom Development</li>
+            <li>Assist and review User Documentation as required</li>
+            <li>Lead software development projects by providing assistance, coaching and mentoring to project team</li>
+            <li>Document API interfaces as required</li>
+            
+            
+            </ul>
+            <u>Required Skills</u>
+            <ul>
+           <li>css : 1 to 2 years</li>
+            <li>html : 1 to 2 years</li>
+            <li>javascript : 1 to 2 years</li>
+            <li>jquery : 1 to 2 years</li>
+            <li>sql : 1 to 2 years</li>
+           
+          </ul>
+                </div>
+           
 
-                            </div>
-                        </div>
+              
 
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+    <p>
+        
+    </p>
+                                    
+            
+                                </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Koniglich Essen</td>
+                                      <td>
+                                            <!-- Trigger the modal with a button -->
+    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">View more</button>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+         
+          <div class="modal-body">
+          <h5>Job Advert</h5>
+            <p>Company Name: IkusasaTechnology Solutions<br>Position : Junior Front- End developer<br>Contract : Permanant<br> Salary: Negotiable<br><br><br><u>RESPONSIBILITIES:</u><br>
+            <ul>
+            <li>Software Design</li>
+            <li>Perform detailed systems analysis and software design</li>
+            <li>Ensure design fits in with business requirements</li>
+            <li>Identify possible test scenarios</li>
+            
+            </ul>
+            <br>
+            <u>Development:</u><br>
+            <ul>
+            <li>Maintain knowledge and keep abreast of  latest technology trends</li>
+            <li>Implementation of latest technologies</li>
+            <li>Adhere to all Development Processes and Procedures</li>
+            <li>Responsible for Custom Development</li>
+            <li>Assist and review User Documentation as required</li>
+            <li>Lead software development projects by providing assistance, coaching and mentoring to project team</li>
+            <li>Document API interfaces as required</li>
+            
+            
+            </ul>
+            <u>Required Skills</u>
+            <ul>
+           <li>css : 1 to 2 years</li>
+            <li>html : 1 to 2 years</li>
+            <li>javascript : 1 to 2 years</li>
+            <li>jquery : 1 to 2 years</li>
+            <li>sql : 1 to 2 years</li>
+           
+          </ul>
+                </div>
+            </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Laughing Bacchus Winecellars</td>
+                                      <td>
+                                            <!-- Trigger the modal with a button -->
+    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">View more</button>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+         
+          <div class="modal-body">
+          <h5>Job Advert</h5>
+            <p>Company Name: IkusasaTechnology Solutions<br>Position : Junior Front- End developer<br>Contract : Permanant<br> Salary: Negotiable<br><br><br><u>RESPONSIBILITIES:</u><br>
+            <ul>
+            <li>Software Design</li>
+            <li>Perform detailed systems analysis and software design</li>
+            <li>Ensure design fits in with business requirements</li>
+            <li>Identify possible test scenarios</li>
+            
+            </ul>
+            <br>
+            <u>Development:</u><br>
+            <ul>
+            <li>Maintain knowledge and keep abreast of  latest technology trends</li>
+            <li>Implementation of latest technologies</li>
+            <li>Adhere to all Development Processes and Procedures</li>
+            <li>Responsible for Custom Development</li>
+            <li>Assist and review User Documentation as required</li>
+            <li>Lead software development projects by providing assistance, coaching and mentoring to project team</li>
+            <li>Document API interfaces as required</li>
+            
+            
+            </ul>
+            <u>Required Skills</u>
+            <ul>
+           <li>css : 1 to 2 years</li>
+            <li>html : 1 to 2 years</li>
+            <li>javascript : 1 to 2 years</li>
+            <li>jquery : 1 to 2 years</li>
+            <li>sql : 1 to 2 years</li>
+           
+          </ul>
+                </div>
+           
 
-                            <div class="box-part text-center">
-                                <center>
-                                    <img src="images/loginrecruit.png" alt="Here you login">
-                                </center>
+              
 
-                                <div class="title">
-                                    <h4>LOGIN OR REGISTER</h4>
-                                </div>
+    <p>
+        
+    </p>
+                                    
+            
+                                </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Magazzini Alimentari Riuniti</td>
+                                      <td>
+                                            <!-- Trigger the modal with a button -->
+    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">View more</button>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+         
+          <div class="modal-body">
+          <h5>Job Advert</h5>
+            <p>Company Name: IkusasaTechnology Solutions<br>Position : Junior Front- End developer<br>Contract : Permanant<br> Salary: Negotiable<br><br><br><u>RESPONSIBILITIES:</u><br>
+            <ul>
+            <li>Software Design</li>
+            <li>Perform detailed systems analysis and software design</li>
+            <li>Ensure design fits in with business requirements</li>
+            <li>Identify possible test scenarios</li>
+            
+            </ul>
+            <br>
+            <u>Development:</u><br>
+            <ul>
+            <li>Maintain knowledge and keep abreast of  latest technology trends</li>
+            <li>Implementation of latest technologies</li>
+            <li>Adhere to all Development Processes and Procedures</li>
+            <li>Responsible for Custom Development</li>
+            <li>Assist and review User Documentation as required</li>
+            <li>Lead software development projects by providing assistance, coaching and mentoring to project team</li>
+            <li>Document API interfaces as required</li>
+            
+            
+            </ul>
+            <u>Required Skills</u>
+            <ul>
+           <li>css : 1 to 2 years</li>
+            <li>html : 1 to 2 years</li>
+            <li>javascript : 1 to 2 years</li>
+            <li>jquery : 1 to 2 years</li>
+            <li>sql : 1 to 2 years</li>
+           
+          </ul>
+                </div>
+           
 
-                                <div class="text">
-                                    <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta
-                                        ocurreret qui ad.</span>
-                                </div>
+              
 
-                                <a href="#">Learn More</a>
+    <p>
+        
+    </p>
+                                    
+            
+                                </td>
+                                    </tr>
+                                    <tr>
+                                      <td>North/South</td>
+                                      <td>
+                                            <!-- Trigger the modal with a button -->
+    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">View more</button>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+         
+          <div class="modal-body">
+          <h5>Job Advert</h5>
+            <p>Company Name: IkusasaTechnology Solutions<br>Position : Junior Front- End developer<br>Contract : Permanant<br> Salary: Negotiable<br><br><br><u>RESPONSIBILITIES:</u><br>
+            <ul>
+            <li>Software Design</li>
+            <li>Perform detailed systems analysis and software design</li>
+            <li>Ensure design fits in with business requirements</li>
+            <li>Identify possible test scenarios</li>
+            
+            </ul>
+            <br>
+            <u>Development:</u><br>
+            <ul>
+            <li>Maintain knowledge and keep abreast of  latest technology trends</li>
+            <li>Implementation of latest technologies</li>
+            <li>Adhere to all Development Processes and Procedures</li>
+            <li>Responsible for Custom Development</li>
+            <li>Assist and review User Documentation as required</li>
+            <li>Lead software development projects by providing assistance, coaching and mentoring to project team</li>
+            <li>Document API interfaces as required</li>
+            
+            
+            </ul>
+            <u>Required Skills</u>
+            <ul>
+           <li>css : 1 to 2 years</li>
+            <li>html : 1 to 2 years</li>
+            <li>javascript : 1 to 2 years</li>
+            <li>jquery : 1 to 2 years</li>
+            <li>sql : 1 to 2 years</li>
+           
+          </ul>
+                </div>
+           
 
-                            </div>
-                        </div>
+              
 
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+    <p>
+        
+    </p>
+                                    
+            
+                                </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Paris specialites</td>
+                                      <td>
+                                            <!-- Trigger the modal with a button -->
+    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">View more</button>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+         
+          <div class="modal-body">
+          <h5>Job Advert</h5>
+            <p>Company Name: IkusasaTechnology Solutions<br>Position : Junior Front- End developer<br>Contract : Permanant<br> Salary: Negotiable<br><br><br><u>RESPONSIBILITIES:</u><br>
+            <ul>
+            <li>Software Design</li>
+            <li>Perform detailed systems analysis and software design</li>
+            <li>Ensure design fits in with business requirements</li>
+            <li>Identify possible test scenarios</li>
+            
+            </ul>
+            <br>
+            <u>Development:</u><br>
+            <ul>
+            <li>Maintain knowledge and keep abreast of  latest technology trends</li>
+            <li>Implementation of latest technologies</li>
+            <li>Adhere to all Development Processes and Procedures</li>
+            <li>Responsible for Custom Development</li>
+            <li>Assist and review User Documentation as required</li>
+            <li>Lead software development projects by providing assistance, coaching and mentoring to project team</li>
+            <li>Document API interfaces as required</li>
+            
+            
+            </ul>
+            <u>Required Skills</u>
+            <ul>
+           <li>css : 1 to 2 years</li>
+            <li>html : 1 to 2 years</li>
+            <li>javascript : 1 to 2 years</li>
+            <li>jquery : 1 to 2 years</li>
+            <li>sql : 1 to 2 years</li>
+           
+          </ul>
+                </div>
+           
 
-                            <div class="box-part text-center">
+              
 
-                                <center>
-                                    <img src="images/jobposting.png" alt="Here you login">
-                                </center>
-
-                                <div class="title">
-                                    <h4>POST A VACANT</h4>
-                                </div>
-
-                                <div class="text">
-                                    <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta
-                                        ocurreret qui ad.</span>
-                                </div>
-
-                                <a href="#">Learn More</a>
-
-                            </div>
-                        </div>
+    <p>
+        
+    </p>
+                                    
+            
+                                </td>
+                                    </tr>
+                                  </table>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>
-                                    <input id="myInput" type="text" placeholder="Search..">
-                                </th>
-                                
-                            </tr>
-                        </thead>
-                    </table>
-
-                </div>
-                <div class="describtion">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                        <h5>Description</h5>
-                    <table>
-
-                        <tbody id="myTable">
-                            <tr>
-                                <td>
-                                    <p id="jobRole"></p>
-                                </td>
-                                <td id="companyName">
-                                    <span id="position">
-                                        <br>
-                                    </span>
-                                    <br>
-                                    <span id="contract"></span>
-                                    <br>
-                                    <span id="salary"></span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                </div>
-            </div>
-
-            </div>
-
+               
+                
+                
+                
+                
+                <script>
+                function myFunction() {
+                  var input, filter, table, tr, td, i, txtValue;
+                  input = document.getElementById("myInput");
+                  filter = input.value.toUpperCase();
+                  table = document.getElementById("myTable");
+                  tr = table.getElementsByTagName("tr");
+                  for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[0];
+                    if (td) {
+                      txtValue = td.textContent || td.innerText;
+                      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                      } else {
+                        tr[i].style.display = "none";
+                      }
+                    }       
+                  }
+                }
+                </script>
+                
+                </body>
+                </html>
+                
         </div>
-
 
 
 
