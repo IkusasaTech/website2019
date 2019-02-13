@@ -9,6 +9,7 @@
     <link rel="shortcut icon" type="image/png" sizes="56x57" href="images/fav-icon/favicon.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
+   
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><script src="vendor/html5shiv.js"></script><script src="vendor/respond.js"></script><![endif]-->
     <link rel="manifest" href="/manifest.json">
     <!-- Add to home screen for Safari on iOS -->
@@ -178,765 +179,1057 @@
         <br>
         <br>
         <br>
+
         <div class="container">
-                <!DOCTYPE html>
-                <html>
-                <head>
+
+            <html>
+
+            <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <style>
-                * {
-                  box-sizing: border-box;
-                }
-                
-                #myInput {
-                  background-image: url('/css/searchicon.png');
-                  background-position: 10px 10px;
-                  background-repeat: no-repeat;
-                  width: 100%;
-                  font-size: 16px;
-                  padding: 12px 20px 12px 40px;
-                  border: 1px solid #ddd;
-                  margin-bottom: 12px;
-                }
-                
-                #myTable {
-                  border-collapse: collapse;
-                  width: 100%;
-                  border: 1px solid #ddd;
-                  font-size: 18px;
-                }
-                
-                #myTable th, #myTable td {
-                  text-align: left;
-                  padding: 12px;
-                }
-                
-                #myTable tr {
-                  border-bottom: 1px solid #ddd;
-                }
-                
-                #myTable tr.header, #myTable tr:hover {
-                  background-color: #f1f1f1;
-                }
+                    * {
+                        box-sizing: border-box;
+                    }
+
+                    .scroll {
+                        background-color: lightslategray;
+                        height: 280px;
+                        width: auto;
+                        overflow-y: scroll;
+
+                    }
+
+                    #myInput {
+                        background-image: url('/css/searchicon.png');
+                        background-position: 10px 10px;
+                        background-repeat: no-repeat;
+                        width: 100%;
+                        font-size: 16px;
+                        padding: 12px 20px 12px 40px;
+                        border: 1px solid #ddd;
+                        margin-bottom: 12px;
+                    }
+
+                    #myTable {
+                        border-collapse: collapse;
+                        width: 100%;
+                        border: 1px solid #ddd;
+                        font-size: 18px;
+                    }
+
+                    #myTable th,
+                    #myTable td {
+                        text-align: left;
+                        padding: 5px;
+                    }
+
+                    #myTable tr {
+                        border-bottom: 1px solid #ddd;
+                    }
+
+                    #myTable tr.header,
+                    #myTable tr:hover {
+                        background-color: #f1f1f1;
+                    }
                 </style>
-                </head>
-                <body>
-                <div class="h2">
-                <h2>My Customers</h2>
-            </div>
+            </head>
+
+            <body>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="recruit-tab col-lg-6 col-md-6 col-sm-12">
+                        <img src="images/recruitpic1.jpg" alt="Trulli" width="700" height="200">
+                    </div>
+                    <div class="recruit-tab2 col-lg-6 col-md-6 col-sm-12" width="700" height="200">
+
+                    </div>
+                </div>
+
+                <div class="box-box">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                                <div class="box-part text-center">
+
+                                    <center>
+                                        <img src="images/cv-upload.jpg" alt="Here you login">
+                                    </center>
+
+                                    <div class="title">
+                                        <h4>UPLOAD YOUR CV</h4>
+                                    </div>
+
+                                    <div class="text">
+                                        <span>The first step to a successful career is compiling a great Curriculum Vitae. Include all relevant work and contact details of previous employers
+                                            in your CV. </span>
+                                    </div>
+
+                                    <a href="#">Learn More</a>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                                <div class="box-part text-center">
+                                    <center>
+                                        <img src="images/loginrecruit.png" alt="Here you login">
+                                    </center>
+
+                                    <div class="title">
+                                        <h4>LOGIN OR REGISTER</h4>
+                                    </div>
+
+                                    <div class="text">
+                                        <span>If you haven't registered before on our website, please do so below. If you have
+                                            already registered, then please login.</span>
+                                    </div>
+
+                                    <a href="#">Learn More</a>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+
+                                <div class="box-part text-center">
+
+                                    <center>
+                                        <img src="images/jobposting.png" alt="Here you login">
+                                    </center>
+
+                                    <div class="title">
+                                        <h4>POST A VACANT</h4>
+                                    </div>
+
+                                    <div class="text">
+                                        <span>A job posting is an alerts to current employees or the public of an immediate or
+                                            future job opening within a company. </span>
+                                    </div>
+
+                                    <a href="#">Learn More</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
                             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                        </div>
                     </div>
-                    </div>
+                    <div class="scroll">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
 
-                  <div class="row">
-                      <div class="col-lg-12 col-md-12 col-sm-12">
-                            
-                                    <table id="myTable">
-                                            <tr class="header">
-                                              <th style="width:60%;">Available jobs</th>
-                                              <th style="width:40%;">More Details</th>
-                                            </tr>
-                                            <tr>
-                                              <td>Junior Front- End developer</td>
-                                              <td>
-                                                  <!-- Trigger the modal with a button -->
-          <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">View more</button>
-        
-          <!-- Modal -->
-          <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-               
-                <div class="modal-body">
-                <h5>Job Advert</h5>
-                  <p>Company Name: IkusasaTechnology Solutions<br>Position : Junior Front- End developer<br>Contract : Permanant<br> Salary: Negotiable<br><br><br><u>RESPONSIBILITIES:</u><br>
-                  <ul>
-                  <li>Software Design</li>
-                  <li>Perform detailed systems analysis and software design</li>
-                  <li>Ensure design fits in with business requirements</li>
-                  <li>Identify possible test scenarios</li>
-                  
-                  </ul>
-                  <br>
-                  <u>Development:</u><br>
-                  <ul>
-                  <li>Maintain knowledge and keep abreast of  latest technology trends</li>
-                  <li>Implementation of latest technologies</li>
-                  <li>Adhere to all Development Processes and Procedures</li>
-                  <li>Responsible for Custom Development</li>
-                  <li>Assist and review User Documentation as required</li>
-                  <li>Lead software development projects by providing assistance, coaching and mentoring to project team</li>
-                  <li>Document API interfaces as required</li>
-                  
-                  
-                  </ul>
-                  <u>Required Skills</u>
-                  <ul>
-                 <li>css : 1 to 2 years</li>
-                  <li>html : 1 to 2 years</li>
-                  <li>javascript : 1 to 2 years</li>
-                  <li>jquery : 1 to 2 years</li>
-                  <li>sql : 1 to 2 years</li>
-                 
-                </ul>
-                      </div>
-                 
-
-                    
-
-          <p>
-              
-          </p>
-                                          
-                  
-                                      </td>
-                                      
+                                <table id="myTable">
+                                    <tr class="header">
+                                        <th style="width:60%;">Available jobs</th>
+                                        <th style="width:40%;">More Details</th>
                                     </tr>
                                     <tr>
-                                      <td>Berglunds snabbkop</td>
-                                      <td>
+                                        <td>Junior Front- End developer</td>
+                                        <td>
                                             <!-- Trigger the modal with a button -->
-    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">View more</button>
-  
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-         
-          <div class="modal-body">
-          <h5>Job Advert</h5>
-            <p>Company Name: IkusasaTechnology Solutions<br>Position : Junior Front- End developer<br>Contract : Permanant<br> Salary: Negotiable<br><br><br><u>RESPONSIBILITIES:</u><br>
-            <ul>
-            <li>Software Design</li>
-            <li>Perform detailed systems analysis and software design</li>
-            <li>Ensure design fits in with business requirements</li>
-            <li>Identify possible test scenarios</li>
-            
-            </ul>
-            <br>
-            <u>Development:</u><br>
-            <ul>
-            <li>Maintain knowledge and keep abreast of  latest technology trends</li>
-            <li>Implementation of latest technologies</li>
-            <li>Adhere to all Development Processes and Procedures</li>
-            <li>Responsible for Custom Development</li>
-            <li>Assist and review User Documentation as required</li>
-            <li>Lead software development projects by providing assistance, coaching and mentoring to project team</li>
-            <li>Document API interfaces as required</li>
-            
-            
-            </ul>
-            <u>Required Skills</u>
-            <ul>
-           <li>css : 1 to 2 years</li>
-            <li>html : 1 to 2 years</li>
-            <li>javascript : 1 to 2 years</li>
-            <li>jquery : 1 to 2 years</li>
-            <li>sql : 1 to 2 years</li>
-           
-          </ul>
-                </div>
-           
+                                            <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal0">View more</button>
 
-              
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="myModal0" role="dialog">
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
 
-    <p>
-        
-    </p>
-                                    
-            
-                                </td>
+                                                        <div class="body">
+                                                            <div class="margin">
+                                                                <h6>
+                                                                    <u>Vacancy Details</u>
+                                                                </h6>
+                                                                <br>
+                                                                <p>Company Name: IkusasaTechnology Solutions
+                                                                    <br>Position : Junior Front- End developer
+                                                                    <br>Contract : Permanant
+                                                                    <br> Salary: Negotiable
+                                                                    <br>
+                                                                    <br>
+                                                                    <br>
+                                                                    <u>RESPONSIBILITIES:</u>
+                                                                    <br>
+                                                                    <ol>
+                                                                        <li>Software Design</li>
+                                                                        <li>Perform detailed systems analysis and software design</li>
+                                                                        <li>Ensure design fits in with business requirements</li>
+                                                                        <li>Identify possible test scenarios</li>
+
+                                                                    </ol>
+                                                                    <br>
+                                                                    <u>Development:</u>
+                                                                    <br>
+                                                                    <ol>
+                                                                        <li>Maintain knowledge and keep abreast of latest technology
+                                                                            trends
+                                                                        </li>
+                                                                        <li>Implementation of latest technologies</li>
+                                                                        <li>Adhere to all Development Processes and Procedures</li>
+                                                                        <li>Responsible for Custom Development</li>
+                                                                        <li>Assist and review User Documentation as required</li>
+                                                                        <li>Lead software development projects by providing assistance,
+                                                                            coaching and mentoring to project team</li>
+                                                                        <li>Document API interfaces as required</li>
+
+
+                                                                    </ol>
+                                                                    <u>Required Skills:</u>
+                                                                    <ol>
+                                                                        <li>css : 1 to 2 years</li>
+                                                                        <li>html : 1 to 2 years</li>
+                                                                        <li>javascript : 1 to 2 years</li>
+                                                                        <li>jquery : 1 to 2 years</li>
+                                                                        <li>sql : 1 to 2 years</li>
+
+                                                                    </ol>
+                                                                    <br>
+                                                                    <hr> Apply before Tuesday, February 19, 2019 - 13 Days left
+                                                                    <br> Companies may expire jobs at their own discretion.
+                                                                    <br> If you have not received a response within two weeks,
+                                                                    your application was most likely unsuccessful.
+                                                                    <br>
+                                                                    <br>
+                                                                    <center>
+                                                                        <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">Apply Now</button>
+                                                                    </center>
+                                                            </div>
+                                                        </div>
+
+
+                                        </td>
+
                                     </tr>
                                     <tr>
-                                      <td>Island Trading</td>
-                                      <td>
+                                        <td>Full Stack Python Software Engineer– Python</td>
+                                        <td>
                                             <!-- Trigger the modal with a button -->
-    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">View more</button>
-  
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-         
-          <div class="modal-body">
-          <h5>Job Advert</h5>
-            <p>Company Name: IkusasaTechnology Solutions<br>Position : Junior Front- End developer<br>Contract : Permanant<br> Salary: Negotiable<br><br><br><u>RESPONSIBILITIES:</u><br>
-            <ul>
-            <li>Software Design</li>
-            <li>Perform detailed systems analysis and software design</li>
-            <li>Ensure design fits in with business requirements</li>
-            <li>Identify possible test scenarios</li>
-            
-            </ul>
-            <br>
-            <u>Development:</u><br>
-            <ul>
-            <li>Maintain knowledge and keep abreast of  latest technology trends</li>
-            <li>Implementation of latest technologies</li>
-            <li>Adhere to all Development Processes and Procedures</li>
-            <li>Responsible for Custom Development</li>
-            <li>Assist and review User Documentation as required</li>
-            <li>Lead software development projects by providing assistance, coaching and mentoring to project team</li>
-            <li>Document API interfaces as required</li>
-            
-            
-            </ul>
-            <u>Required Skills</u>
-            <ul>
-           <li>css : 1 to 2 years</li>
-            <li>html : 1 to 2 years</li>
-            <li>javascript : 1 to 2 years</li>
-            <li>jquery : 1 to 2 years</li>
-            <li>sql : 1 to 2 years</li>
-           
-          </ul>
-                </div>
-           
+                                            <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal1">View more</button>
 
-              
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="myModal1" role="dialog">
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
 
-    <p>
-        
-    </p>
-                                    
-            
-                                </td>
+                                                        <div class="body">
+
+                                                            <div class="margin">
+                                                                <h6>
+                                                                    <u>Vacancy Details</u>
+                                                                </h6>
+                                                                <br>
+                                                                <p>
+                                                                    Introduction Our client site is on the lookout for experienced Python developers to join their team. They are big on upskilling
+                                                                    their team and push working on the latest technologies.
+                                                                    There is lots of project work on the go, within a relaxed
+                                                                    environment
+                                                                    <hr> Apply before Tuesday, February 19, 2019 - 13 Days left
+                                                                    <br> Companies may expire jobs at their own discretion.
+                                                                    <br> If you have not received a response within two weeks,
+                                                                    your application was most likely unsuccessful.
+                                                                    <br>
+                                                                    <br>
+
+                                                                </p>
+
+                                                                <center>
+                                                                    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">Apply Now</button>
+                                                                </center>
+
+                                                            </div>
+
+
+
+
+
+
+                                        </td>
                                     </tr>
                                     <tr>
-                                      <td>Koniglich Essen</td>
-                                      <td>
+                                        <td>SQL Developer </td>
+                                        <td>
                                             <!-- Trigger the modal with a button -->
-    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">View more</button>
-  
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-         
-          <div class="modal-body">
-          <h5>Job Advert</h5>
-            <p>Company Name: IkusasaTechnology Solutions<br>Position : Junior Front- End developer<br>Contract : Permanant<br> Salary: Negotiable<br><br><br><u>RESPONSIBILITIES:</u><br>
-            <ul>
-            <li>Software Design</li>
-            <li>Perform detailed systems analysis and software design</li>
-            <li>Ensure design fits in with business requirements</li>
-            <li>Identify possible test scenarios</li>
-            
-            </ul>
-            <br>
-            <u>Development:</u><br>
-            <ul>
-            <li>Maintain knowledge and keep abreast of  latest technology trends</li>
-            <li>Implementation of latest technologies</li>
-            <li>Adhere to all Development Processes and Procedures</li>
-            <li>Responsible for Custom Development</li>
-            <li>Assist and review User Documentation as required</li>
-            <li>Lead software development projects by providing assistance, coaching and mentoring to project team</li>
-            <li>Document API interfaces as required</li>
-            
-            
-            </ul>
-            <u>Required Skills</u>
-            <ul>
-           <li>css : 1 to 2 years</li>
-            <li>html : 1 to 2 years</li>
-            <li>javascript : 1 to 2 years</li>
-            <li>jquery : 1 to 2 years</li>
-            <li>sql : 1 to 2 years</li>
-           
-          </ul>
-                </div>
-            </td>
+                                            <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal2">View more</button>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="myModal2" role="dialog">
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
+
+                                                        <div class="body">
+                                                            <div class="margin">
+                                                                <h6>
+                                                                    <u>Vacancy Details</u>
+                                                                </h6>
+                                                                <br>
+                                                                <p>
+                                                                    A top role
+                                                                    <br> has just come in at a client that offers value-added
+                                                                    insurance products at competitive prices through point
+                                                                    of sale, enabling dealers to offer a comprehensive range
+                                                                    of products to their customers, and through telesales
+                                                                    channels. They are owned by top blue-chip firms in the
+                                                                    country which means career growth is imminent.
+                                                                    <br> Required:
+                                                                    <br> Functions:
+                                                                    <br> 1. Data warehouse development (SQL)
+                                                                    <br> 2. Report writing (SQL and QlikView).
+                                                                    <br>
+                                                                    <br> Qualifications & Experience:
+                                                                    <br> 1. SQL (Scripting, Views, Functions, Stored Procedures,
+                                                                    Importing data tables SSIS, Cubes, Analysis Services)
+                                                                    <br> 2. Data warehouse principles (ETL process is critical)
+                                                                    <br> 3. QlikView (report building) would serve as an advantage
+                                                                    <br> 4. Microsoft (Excel, Access, Visio, Word, PowerPoint)
+                                                                    <br> 5. Exposure to C#.net would serve as an advantage
+                                                                    <br> Skills
+                                                                    <br> 1. Data flow mapping
+                                                                    <br> 2. Problem solving
+                                                                    <br> 3. Communication (excellent written and verbal)
+                                                                    <br> 3. If you are ready to take your career to the next
+                                                                    level, then this may be the right opportunity for you!
+                                                                    <br> Check out our website
+                                                                    <br> www.e-merge.co.za
+                                                                    <br> for more positions that might be right for you!
+                                                                    <br> Do you have a friend who is a technology specialist?
+                                                                    We pay BIG CASH to you if we place a friend that you
+                                                                    sent us!
+                                                                    <br> “If you haven’t heard from e-Merge IT within 2 weeks
+                                                                    of your application, please consider it unsuccessful
+                                                                    for this position”
+                                                                    <br>
+                                                                </p>
+                                                                <hr> Apply before Tuesday, February 19, 2019 - 13 Days left
+                                                                <br> Companies may expire jobs at their own discretion.
+                                                                <br> If you have not received a response within two weeks, your
+                                                                application was most likely unsuccessful.
+                                                                <br>
+                                                                <br>
+
+
+
+                                                                <center>
+                                                                    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">Apply Now</button>
+                                                                </center>
+
+                                                            </div>
+                                                        </div>
+
+
+
+
+                                                        <p>
+
+                                                        </p>
+
+
+                                        </td>
                                     </tr>
                                     <tr>
-                                      <td>Laughing Bacchus Winecellars</td>
-                                      <td>
+                                        <td>Senior Java Developer</td>
+                                        <td>
                                             <!-- Trigger the modal with a button -->
-    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">View more</button>
-  
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-         
-          <div class="modal-body">
-          <h5>Job Advert</h5>
-            <p>Company Name: IkusasaTechnology Solutions<br>Position : Junior Front- End developer<br>Contract : Permanant<br> Salary: Negotiable<br><br><br><u>RESPONSIBILITIES:</u><br>
-            <ul>
-            <li>Software Design</li>
-            <li>Perform detailed systems analysis and software design</li>
-            <li>Ensure design fits in with business requirements</li>
-            <li>Identify possible test scenarios</li>
-            
-            </ul>
-            <br>
-            <u>Development:</u><br>
-            <ul>
-            <li>Maintain knowledge and keep abreast of  latest technology trends</li>
-            <li>Implementation of latest technologies</li>
-            <li>Adhere to all Development Processes and Procedures</li>
-            <li>Responsible for Custom Development</li>
-            <li>Assist and review User Documentation as required</li>
-            <li>Lead software development projects by providing assistance, coaching and mentoring to project team</li>
-            <li>Document API interfaces as required</li>
-            
-            
-            </ul>
-            <u>Required Skills</u>
-            <ul>
-           <li>css : 1 to 2 years</li>
-            <li>html : 1 to 2 years</li>
-            <li>javascript : 1 to 2 years</li>
-            <li>jquery : 1 to 2 years</li>
-            <li>sql : 1 to 2 years</li>
-           
-          </ul>
-                </div>
-           
+                                            <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal3">View more</button>
 
-              
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="myModal3" role="dialog">
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
 
-    <p>
-        
-    </p>
-                                    
-            
-                                </td>
+                                                        <div class="body">
+                                                            <div class="margin">
+                                                                <h6>
+                                                                    <u>Vacancy Details</u>
+                                                                </h6>
+                                                                <br>
+                                                                <p>
+
+                                                                    Senior Java Developer - Johannesburg – R850k pa - E-merge IT , Johannesburg
+                                                                    <br> Salary: R65 000.00 - R70 833.00 Per Month
+                                                                    <br> Job Type: Permanent
+                                                                    <br> Sectors: IT
+                                                                    <br> Posted by E-merge IT on Monday, January 14, 2019
+                                                                    <br> Reference: SM41591
+                                                                    <br>
+                                                                    <br> Vacancy Details
+                                                                    <br> Employer: E-merge IT
+                                                                    <br> Our client a Johannesburg based financial institution
+                                                                    seeks a GURU Senior Java Developer to join their award
+                                                                    winning and trendsetting institution. If you are a coding
+                                                                    genius and are seeking an opportunity to showcase your
+                                                                    ability, then this is an opportunity for you.
+                                                                    <br> Skills & Experience
+                                                                    <br> · BSc Degree or National Diploma in Information Technology
+                                                                    <br> · Java
+                                                                    <br> · JEE / Spring
+                                                                    <br> · Microservices
+                                                                    <br> · Junit and test automation
+                                                                    <br> · JavaScript, Angular JS, UI5
+                                                                    <br> · XML, HTML, CSS
+                                                                    <br> · Web services
+                                                                    <br> · SAP JCO advantageous
+                                                                    <br> · Understand security concepts
+                                                                    <br> · JSON
+                                                                    <br> · REST
+                                                                    <br> · CI/CD (Maven, Jenkins, GIT)
+                                                                    <br> · Postgres DB
+                                                                    <br> · Docker
+                                                                    <br> · Elastic Search / ELK / EFK Stack
+                                                                    <br> Apply NOW! And become a part of this Multi-National
+                                                                    manufacturing giant and hone your skills even further.
+                                                                    <br> The reference number for this position is SM41591 which
+                                                                    is a permanent position based in Johannesburg offering
+                                                                    a salary of up to R850k per annum negotiable on experience
+                                                                    and ability.
+                                                                    <br> The time for change is NOW! e-Merge IT recruitment are
+                                                                    specialist niche recruiters with a wide range of positions
+                                                                    available. We offer researched positions with top companies
+                                                                    to strong technical candidates.
+                                                                    <br> Email Siphamandla on siphamandlam@e-merge.co.za or call
+                                                                    him on XXX-XXXX to discuss this and other opportunities.
+                                                                    <br> Check out our website www.e-merge.co.za for more positions
+                                                                    that might be right for you!
+                                                                    <br> Do you have a friend who is a technology specialist?
+                                                                    We pay BIG CASH to you if we place a friend that you
+                                                                    sent us!
+                                                                    <br> “If you haven’t heard from e-Merge IT within 2 weeks
+                                                                    of your application, please consider it unsuccessful
+                                                                    for this position
+                                                                    <br>
+                                                                    <hr> Apply before Tuesday, February 19, 2019 - 13 Days left
+                                                                    <br> Companies may expire jobs at their own discretion.
+                                                                    <br> If you have not received a response within two weeks,
+                                                                    your application was most likely unsuccessful.
+                                                                    <br>
+                                                                    <br>
+
+                                                                </p>
+
+                                                                <center>
+                                                                    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">Apply Now</button>
+                                                                </center>
+
+                                                            </div>
+                                                        </div>
+                                        </td>
                                     </tr>
                                     <tr>
-                                      <td>Magazzini Alimentari Riuniti</td>
-                                      <td>
+                                        <td>Intermediate Linux Systems Administrator</td>
+                                        <td>
                                             <!-- Trigger the modal with a button -->
-    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">View more</button>
-  
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-         
-          <div class="modal-body">
-          <h5>Job Advert</h5>
-            <p>Company Name: IkusasaTechnology Solutions<br>Position : Junior Front- End developer<br>Contract : Permanant<br> Salary: Negotiable<br><br><br><u>RESPONSIBILITIES:</u><br>
-            <ul>
-            <li>Software Design</li>
-            <li>Perform detailed systems analysis and software design</li>
-            <li>Ensure design fits in with business requirements</li>
-            <li>Identify possible test scenarios</li>
-            
-            </ul>
-            <br>
-            <u>Development:</u><br>
-            <ul>
-            <li>Maintain knowledge and keep abreast of  latest technology trends</li>
-            <li>Implementation of latest technologies</li>
-            <li>Adhere to all Development Processes and Procedures</li>
-            <li>Responsible for Custom Development</li>
-            <li>Assist and review User Documentation as required</li>
-            <li>Lead software development projects by providing assistance, coaching and mentoring to project team</li>
-            <li>Document API interfaces as required</li>
-            
-            
-            </ul>
-            <u>Required Skills</u>
-            <ul>
-           <li>css : 1 to 2 years</li>
-            <li>html : 1 to 2 years</li>
-            <li>javascript : 1 to 2 years</li>
-            <li>jquery : 1 to 2 years</li>
-            <li>sql : 1 to 2 years</li>
-           
-          </ul>
-                </div>
-           
+                                            <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal4">View more</button>
 
-              
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="myModal4" role="dialog">
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
 
-    <p>
-        
-    </p>
-                                    
-            
-                                </td>
+                                                        <div class="body">
+                                                            <div class="margin">
+                                                                <h6>
+                                                                    <u>Vacancy Details</u>
+                                                                </h6>
+                                                                <br>
+                                                                <p>
+
+                                                                    Intermediate Linux Systems Administrator - e-Merge IT Recruitment, West Rand
+                                                                    <br> Salary: R40 000.00 Per Month Per Month
+                                                                    <br> Job Type: Permanent
+                                                                    <br> Sectors: IT
+                                                                    <br> Posted by e-Merge IT Recruitment on Tuesday, January
+                                                                    8, 2019
+                                                                    <br> Reference: ND36181-2018
+                                                                    <br> Vacancy Details
+                                                                    <br> Employer: e-Merge IT Recruitment
+                                                                    <br> Intermediate Linux Systems Administrator
+                                                                    <br> Leading Medical Insurance House in the West Rand is
+                                                                    looking for an Intermediate Linux Administrator to ensure
+                                                                    that the relevant systems and/or systems infrastructure
+                                                                    is administered, monitored, maintained, updated and performs
+                                                                    at a sustained level to enable effective organisational
+                                                                    operational functioning. If you are an excellent problem
+                                                                    solver, customer focused and attentive to detail then
+                                                                    this is the role for you.
+                                                                    <br> Requirements:
+                                                                    <br> BSc Degree / National Diploma in Information Technology
+                                                                    <br> 3 years relevant systems administration experience,
+                                                                    as well as additional experience in IT (e.g. SQL administration,
+                                                                    storage administration.
+                                                                    <br> Able to solve IT related problems within the business.
+                                                                    <br> Responsibilities:
+                                                                    <br> Administer and maintain operating system software, hardware
+                                                                    and associated utility software products
+                                                                    <br> Monitor and report on systems and systems infrastructure
+                                                                    <br> Ensure data back-up's and recovery requirements are
+                                                                    met and systems and system infrastructure security is
+                                                                    in place, accurate and appropriate
+                                                                    <br> Maintain up to date understanding of related systems
+                                                                    infrastructure and systems and infrastructure developments/enhancements
+                                                                    <br> Ensure appropriate, active and informative relationships
+                                                                    with customers and relevant stakeholders are successfully
+                                                                    achieved
+                                                                    <br> Address customer or stakeholder complaints in alignment
+                                                                    with the policies and procedures and ensuring customer
+                                                                    / stakeholder buy-in
+                                                                    <br> DON’T DELAY AND APPLY TODAY!!! The reference number
+                                                                    for this position is ND36181. This is a Permanent position
+                                                                    based in the West Rand, offering a salary of R480K CTC
+                                                                    per annum.
+                                                                    <br> e-Merge IT recruitment are specialist niche recruiters
+                                                                    with a wide range of positions available. We offer researched
+                                                                    positions with top companies to strong technical skilled
+                                                                    candidates.
+                                                                    <br> Email Nicole on nicoled@e-merge.co.za. Alternatively
+                                                                    call her on XXX-XXXX to discuss this and other opportunities
+                                                                    available.
+                                                                    <br> Please feel free to check out our website on www.e-merge.co.za
+                                                                    for similar positions that might be of interest to you!!
+                                                                    Do you have a friend who is a technology specialist?
+                                                                    We pay BIG CASH to you if we place a friend that you
+                                                                    sent us!
+                                                                    <br> “If you haven’t heard from e-Merge IT within 2 weeks
+                                                                    of your application, please consider it unsuccessful
+                                                                    for this position”
+                                                                    <br>
+                                                                    <hr> Apply before Tuesday, February 19, 2019 - 13 Days left
+                                                                    <br> Companies may expire jobs at their own discretion.
+                                                                    <br> If you have not received a response within two weeks,
+                                                                    your application was most likely unsuccessful.
+                                                                    <br>
+                                                                    <br>
+
+                                                                </p>
+
+                                                                <center>
+                                                                    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">Apply Now</button>
+                                                                </center>
+
+                                                            </div>
+
+                                                        </div>
+
+
+
+
+                                                        <p>
+
+                                                        </p>
+
+
+                                        </td>
                                     </tr>
                                     <tr>
-                                      <td>North/South</td>
-                                      <td>
+                                        <td>IT Consultant / Architect </td>
+                                        <td>
                                             <!-- Trigger the modal with a button -->
-    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">View more</button>
-  
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-         
-          <div class="modal-body">
-          <h5>Job Advert</h5>
-            <p>Company Name: IkusasaTechnology Solutions<br>Position : Junior Front- End developer<br>Contract : Permanant<br> Salary: Negotiable<br><br><br><u>RESPONSIBILITIES:</u><br>
-            <ul>
-            <li>Software Design</li>
-            <li>Perform detailed systems analysis and software design</li>
-            <li>Ensure design fits in with business requirements</li>
-            <li>Identify possible test scenarios</li>
-            
-            </ul>
-            <br>
-            <u>Development:</u><br>
-            <ul>
-            <li>Maintain knowledge and keep abreast of  latest technology trends</li>
-            <li>Implementation of latest technologies</li>
-            <li>Adhere to all Development Processes and Procedures</li>
-            <li>Responsible for Custom Development</li>
-            <li>Assist and review User Documentation as required</li>
-            <li>Lead software development projects by providing assistance, coaching and mentoring to project team</li>
-            <li>Document API interfaces as required</li>
-            
-            
-            </ul>
-            <u>Required Skills</u>
-            <ul>
-           <li>css : 1 to 2 years</li>
-            <li>html : 1 to 2 years</li>
-            <li>javascript : 1 to 2 years</li>
-            <li>jquery : 1 to 2 years</li>
-            <li>sql : 1 to 2 years</li>
-           
-          </ul>
-                </div>
-           
+                                            <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal6">View more</button>
 
-              
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="myModal6" role="dialog">
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
 
-    <p>
-        
-    </p>
-                                    
-            
-                                </td>
+                                                        <div class="modal-body">
+                                                            <div class="margin">
+                                                                <h6>
+                                                                    <u>Vacancy Details</u>
+                                                                </h6>
+                                                                <br>
+                                                                <p>
+                                                                    Job Description:
+                                                                    <br> A global business whose core focus is Financial Software
+                                                                    and Digital Solutions. They are looking for hot shot
+                                                                    candidates with a Java Development background and experience
+                                                                    in Architecture. You need to have Wealth Management and/or
+                                                                    Financial Planning! SEND YOUR CV TODAY!
+                                                                    <br> Requirements:
+                                                                    <br> A relevant university degree, bachelor or higher
+                                                                    <br> >4 years’ relevant experience, ideally within the financial
+                                                                    services industry
+                                                                    <br> A clear understanding of ICT infrastructure and integration
+                                                                    <br> Proven to be a problem solver of technical issues in
+                                                                    complex and political project environments
+                                                                    <br> A clear understanding of project and software development
+                                                                    methodologies
+                                                                    <br> Experience in working with offshore teams
+                                                                    <br> Proven experience in J2EE architectures based solutions
+                                                                    management
+                                                                    <br> Preferred experience with one or more of the following
+                                                                    technologies: Microsoft. NET, TCP/IP networks, firewalls
+                                                                    and troubleshooting, problem solving and fault diagnosis,
+                                                                    SQL Server, E-mail servers, application server deployments,
+                                                                    SSL, web-services, SOAP, XML, JSON/REST, Windows power-shell
+                                                                    scripting, Windows active directory (2008/2011).
+                                                                    <br> If you are ready to take your career to the next level,
+                                                                    then this may be the right opportunity for you!
+                                                                    <br> Reference Number for this position is MHXXX-XXXX which
+                                                                    is a permanent / contract position based in JHB offering
+                                                                    a salary in the region of R840k per annum or R700ph level
+                                                                    and experience.
+                                                                    <br> The time for change is NOW! e-Merge IT recruitment are
+                                                                    specialist niche recruiters with a wide range of positions
+                                                                    available. We offer researched positions with top companies
+                                                                    to strong technical candidates. Email Michelle on michelle
+                                                                    @ e-merge .co .za to discuss this and other opportunities.
+                                                                    <br> Check out our website www.e-merge.co.za for more positions
+                                                                    that might be right for you!
+                                                                    <br> Do you have a friend who is a technology specialist?
+                                                                    We pay BIG CASH to you if we place a friend that you
+                                                                    sent us!
+                                                                    <br>
+                                                                    <br> “If you haven’t heard from e-Merge IT within 2 weeks
+                                                                    of your application, please consider it unsuccessful
+                                                                    for this position”
+                                                                    <hr> Apply before Tuesday, February 19, 2019 - 13 Days left
+                                                                    <br> Companies may expire jobs at their own discretion.
+                                                                    <br> If you have not received a response within two weeks,
+                                                                    your application was most likely unsuccessful.
+                                                                    <br>
+                                                                    <br>
+
+                                                                </p>
+
+                                                                <center>
+                                                                    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal6">Apply Now</button>
+                                                                </center>
+
+                                                            </div>
+
+                                                        </div>
+
+
+                                        </td>
                                     </tr>
                                     <tr>
-                                      <td>Paris specialites</td>
-                                      <td>
+                                        <td>IT Support Administrator </td>
+                                        <td>
                                             <!-- Trigger the modal with a button -->
-    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">View more</button>
-  
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-         
-          <div class="modal-body">
-          <h5>Job Advert</h5>
-            <p>Company Name: IkusasaTechnology Solutions<br>Position : Junior Front- End developer<br>Contract : Permanant<br> Salary: Negotiable<br><br><br><u>RESPONSIBILITIES:</u><br>
-            <ul>
-            <li>Software Design</li>
-            <li>Perform detailed systems analysis and software design</li>
-            <li>Ensure design fits in with business requirements</li>
-            <li>Identify possible test scenarios</li>
-            
-            </ul>
-            <br>
-            <u>Development:</u><br>
-            <ul>
-            <li>Maintain knowledge and keep abreast of  latest technology trends</li>
-            <li>Implementation of latest technologies</li>
-            <li>Adhere to all Development Processes and Procedures</li>
-            <li>Responsible for Custom Development</li>
-            <li>Assist and review User Documentation as required</li>
-            <li>Lead software development projects by providing assistance, coaching and mentoring to project team</li>
-            <li>Document API interfaces as required</li>
-            
-            
-            </ul>
-            <u>Required Skills</u>
-            <ul>
-           <li>css : 1 to 2 years</li>
-            <li>html : 1 to 2 years</li>
-            <li>javascript : 1 to 2 years</li>
-            <li>jquery : 1 to 2 years</li>
-            <li>sql : 1 to 2 years</li>
-           
-          </ul>
-                </div>
-           
+                                            <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal6">View more</button>
 
-              
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="myModal6" role="dialog">
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
 
-    <p>
-        
-    </p>
-                                    
-            
-                                </td>
+                                                        <div class="modal-body">
+                                                            <div class="margin">
+                                                                <h6>
+                                                                    <u>Vacancy Details</u>
+                                                                </h6>
+                                                                <br>
+                                                                <p>
+
+                                                                    IT Support Administrator - Dante Group (Pty) Ltd, Randburg
+                                                                    <br> Salary: Market Related
+                                                                    <br> Job Type: Permanent
+                                                                    <br> Sectors: IT
+                                                                    <br> Posted by Dante Group (Pty) Ltd on Monday, February
+                                                                    4, 2019
+                                                                    <br> Reference: JHB002879/ABJ
+                                                                    <br> Employer: Dante Group (Pty) Ltd
+                                                                    <br> IT Support Administrator
+                                                                    <br> R Neg. depending on experience
+                                                                    <br> IT Support to Office and Field Staff
+                                                                    <br> Networking experience
+                                                                    <br> Advanced Excel
+                                                                    <br> Advantage, pastel evolution, power pivot, power query,
+                                                                    quality management system
+                                                                    <hr> Apply before Tuesday, February 19, 2019 - 13 Days left
+                                                                    <br> Companies may expire jobs at their own discretion.
+                                                                    <br> If you have not received a response within two weeks,
+                                                                    your application was most likely unsuccessful.
+                                                                    <br>
+                                                                    <br>
+
+                                                                </p>
+
+                                                                <center>
+                                                                    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">Apply Now</button>
+                                                                </center>
+
+                                                            </div>
+
+                                                        </div>
+
+
+                                        </td>
                                     </tr>
-                                  </table>
-                    </div>
-                </div>
-               
-                
-                
-                
-                
-                <script>
-                function myFunction() {
-                  var input, filter, table, tr, td, i, txtValue;
-                  input = document.getElementById("myInput");
-                  filter = input.value.toUpperCase();
-                  table = document.getElementById("myTable");
-                  tr = table.getElementsByTagName("tr");
-                  for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[0];
-                    if (td) {
-                      txtValue = td.textContent || td.innerText;
-                      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                      } else {
-                        tr[i].style.display = "none";
-                      }
-                    }       
-                  }
-                }
-                </script>
-                
-                </body>
-                </html>
-                
-        </div>
+                                    <tr>
+                                        <td>Junior C# Web Applications Developers</td>
+                                        <td>
+                                            <!-- Trigger the modal with a button -->
+                                            <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">View more</button>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="myModal" role="dialog">
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
+
+                                                        <div class="body">
+                                                            <div class="margin">
+                                                                <h6>
+                                                                    <u>Vacancy Details</u>
+                                                                </h6>
+                                                                <br>
+                                                                <p>
+
+                                                                    Company in Rosebank is looking to expand their team of developers, must be able to write code and execute successfully.
+                                                                    <br> - - - - - - - - - - - - - - QualificationsCompany in
+                                                                    Rosebank is looking to expand their team of developers,
+                                                                    must be able to write code and execute successfully.
+                                                                    - - - - - - - - - - - - - -
+                                                                    <br> Qualifications • Matric (with Mathematics HG – 60% and
+                                                                    above)
+                                                                    <br> • Only BSc Degree in IT - Mathematics and Statistics
+                                                                    (Above average) with a reputable university
+                                                                    <br> • Honors and/or master’s Degrees welcome
+                                                                    <br> Skills
+
+                                                                    <br> • C#.net
+                                                                    <br> • MVC
+                                                                    <br> • SQL
+                                                                    <br> • MongoDB
+                                                                    <br> • JavaScript
+                                                                    <br> • HTMLS
+                                                                    <br> • Angular
+                                                                    <br> • Java
+                                                                    <br> • Swift, Xcode, Xamarin (An advantage)
+                                                                    <br> Reference for this position is #WebAppDev which is a
+                                                                    permanent position based in Rosebank offering R 15 000
+                                                                    – R 25 000 per month with Company benefits
+                                                                    <br> ICT Recruit is specialist IT recruiters with a wide
+                                                                    range of tech positions available. Should you not hear
+                                                                    from us within 14 working days please consider your application
+                                                                    unsuccessful, however we do keep CV’s on our Database
+                                                                    for future use or other positions you qualify for.
+                                                                    <br> Email CV and Matric, Transcripts to lea @ ictrecruit.
+                                                                    co. za
+                                                                    <br> • Check out our website www.ictrecruit.co.za for more
+                                                                    positions that might be right for you!
+                                                                    <br> • Follow us on Instagram https://www.instagram.com/leaictrecruit/
+                                                                    <br> • Follow us on Twitter https://twitter.com/ictrecruit3
+                                                                    <br> • Matric (with Mathematics HG – 60% and above)
+                                                                    <br> • Only BSc Degree in IT - Mathematics and Statistics
+                                                                    (Above average) with a reputable university
+                                                                    <br> • Honors and/or master’s Degrees welcome
+                                                                    <br> Skills
+
+                                                                    <br> • C#.net
+                                                                    <br> • MVC
+                                                                    <br> • SQL
+                                                                    <br> • MongoDB
+                                                                    <br> • JavaScript
+                                                                    <br> • HTMLS
+                                                                    <br> • Angular
+                                                                    <br> • Java
+                                                                    <br> • Swift, Xcode, Xamarin (An advantage)
+                                                                    <br> Reference for this position is #WebAppDev which is a
+                                                                    permanent position based in Rosebank offering R 15 000
+                                                                    – R 25 000 per month with Company benefits
+                                                                    <br> ICT Recruit is specialist IT recruiters with a wide
+                                                                    range of tech positions available. Should you not hear
+                                                                    from us within 14 working days please consider your application
+                                                                    unsuccessful, however we do keep CV’s on our Database
+                                                                    for future use or other positions you qualify for.
+                                                                    <br> Email CV and Matric, Transcripts to lea @ ictrecruit.
+                                                                    co. za
+                                                                    <br> • Check out our website www.ictrecruit.co.za for more
+                                                                    positions that might be right for you!
+                                                                    <br> • Follow us on Instagram https://www.instagram.com/leaictrecruit/
+                                                                    <br> • Follow us on Twitter https://twitter.com/ictrecruit3
+                                                                    <br>
 
 
 
-        <!-- End Testimonials -->
-        <footer>
-            <div class="container">
-                <div class="row footer">
-                    <div class="footerbottom">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="footerwidget">
-                                <h6>Our Partners in Business</h6>
+                                                                    <hr> Apply before Tuesday, February 19, 2019 - 13 Days left
+                                                                    <br> Companies may expire jobs at their own discretion.
+                                                                    <br> If you have not received a response within two weeks,
+                                                                    your application was most likely unsuccessful.
+                                                                    <br>
+                                                                    <br>
 
-                                <div class="menu-course">
-                                    <ul class="menu">
-                                        <li>
-                                            <a href="http://www.dsbd.gov.za/" target="_blank">
-                                                The Department of Small Business Development
-                                            </a>
-                                        </li>
+                                                                </p>
 
-                                        <li>
-                                            <a href="https://www.l2b.co.za" target="_blank">ABIOT Projects Consultants</a>
-                                        </li>
+                                                                <center>
+                                                                    <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">Apply Now</button>
+                                                                </center>
 
-                                        <li>
-                                            <a href="http://mightycomms.co.za/" target="_blank">Mightycomms</a>
-                                        </li>
+                                                            </div>
 
-                                        <li>
-                                            <a href="https://www.geekulcha.com/" target="_blank">Geekulcha</a>
-                                        </li>
+                                                        </div>
 
-                                        <li>
-                                            <a href="#" target="_blank">NovaTech</a>
-                                        </li>
+                                        </td>
+                                    </tr>
+                                </table>
+                                </div>
+                                </div>
+                                </div>
 
-                                        <li>
-                                            <a href="http://katzconsulting.co.za/" target="_blank">Katz Consulting</a>
-                                        </li>
+                                <script>
+                                    function myFunction() {
+                                        var input, filter, table, tr, td, i, txtValue;
+                                        input = document.getElementById("myInput");
+                                        filter = input.value.toUpperCase();
+                                        table = document.getElementById("myTable");
+                                        tr = table.getElementsByTagName("tr");
+                                        for (i = 0; i < tr.length; i++) {
+                                            td = tr[i].getElementsByTagName("td")[0];
+                                            if (td) {
+                                                txtValue = td.textContent || td.innerText;
+                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                                    tr[i].style.display = "";
+                                                } else {
+                                                    tr[i].style.display = "none";
+                                                }
+                                            }
+                                        }
+                                    }
+                                </script>
 
-                                        <li>
-                                            <a href="#" target="_blank">Intergrated Taxi Services</a>
-                                        </li>
+            </body>
 
-                                        <li>
-                                            <a href="#" target="_blank">Transformer SA</a>
-                                        </li>
+            </html>
+
+            </div>
+
+
+
+
+            <!-- End Testimonials -->
+            <footer>
+                <div class="container">
+                    <div class="row footer">
+                        <div class="footerbottom">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="footerwidget">
+                                    <h6>Our Partners in Business</h6>
+    
+                                    <div class="menu-course">
+                                        <ul class="menu">
+                                            <li>
+                                                <a href="http://www.dsbd.gov.za/" target="_blank">
+                                                    The Department of Small Business Development
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="https://www.l2b.co.za" target="_blank">ABIOT Projects Consultants</a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="http://mightycomms.co.za/" target="_blank">Mightycomms</a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="https://www.geekulcha.com/" target="_blank">Geekulcha</a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#" target="_blank">NovaTech</a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="http://katzconsulting.co.za/" target="_blank">Katz Consulting</a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#" target="_blank">Intergrated Taxi Services</a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#" target="_blank">Transformer SA</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-3 col-sm-6">
+                                <div class="footerwidget">
+                                    <h6>Careers</h6>
+    
+                                    <div class="menu-course">
+                                        <ul class="menu">
+                                            <li>
+                                                <a href="apply.html">Learnerships</a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="apply.html">Interships</a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="apply.html">Jobs</a>
+                                            </li>
+                                            <div class="modal fade" id="vacant" tabindex="-1" role="dialog" aria-labelledby="comptia" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Application for Vacant
+                                                            </h5>
+    
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+    
+                                                        <div class="modal-body">
+                                                            <h3>Please email us your CV to recruitment@ikusasatech.com</h3>
+    
+                                                        </div>
+    
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-
+    
                         <div class="col-md-3 col-sm-6">
                             <div class="footerwidget">
-                                <h6>Careers</h6>
-
-                                <div class="menu-course">
-                                    <ul class="menu">
-                                        <li>
-                                            <a href="apply.html">Learnerships</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="apply.html">Interships</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="apply.html">Jobs</a>
-                                        </li>
-                                        <div class="modal fade" id="vacant" tabindex="-1" role="dialog" aria-labelledby="comptia" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Application for Vacant
-                                                        </h5>
-
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-
-                                                    <div class="modal-body">
-                                                        <h3>Please email us your CV to recruitment@ikusasatech.com</h3>
-
-                                                    </div>
-
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <h6>Contact</h6>
+    
+                                <p>Feel free contact us</p>
+    
+                                <div class="contact-info">
+                                    <i class="fa fa-map-marker"></i>
+                                    : 563 Old Pretoria Rd, Midrand, Johannesburg, 1685
+    
+                                    <br>
+                                    <i class="fa fa-phone"></i>
+                                    : +2711 025 8267/6806
+                                    <br>
+                                    <i class="fa fa-envelope-o"></i>
+                                    : info@ikusasatech.com
                                 </div>
-                                </ul>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <div class="footerwidget">
-                            <h6>Contact</h6>
-
-                            <p>Feel free contact us</p>
-
-                            <div class="contact-info">
-                                <i class="fa fa-map-marker"></i>
-                                : 563 Old Pretoria Rd, Midrand, Johannesburg, 1685
-
-                                <br>
-                                <i class="fa fa-phone"></i>
-                                : +2711 025 8267/6806
-                                <br>
-                                <i class="fa fa-envelope-o"></i>
-                                : info@ikusasatech.com
+    
+                        <div class="col-md-3 col-sm-6">
+                            <div class="footerwidget">
+                                <h6>Social Media</h6>
+    
+                                <div class="footer-social-icons">
+                                    <h4 class="_14">Follow us on</h4>
+                                    <ul class="social-icons">
+                                        <li>
+                                            <a href="https://www.facebook.com/IkusasaTech" target="_blank" class="social-icon">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="http://twitter.com/IkusasaTech" target="_blank" class="social-icon">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="social-icon">
+                                                <i class="fa fa-youtube"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/ikusasatechsolutions/" target="_blank" class="social-icon">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/company/ikusasa-technology-solutions/" target="_blank" class="social-icon">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://plus.google.com/u/1/103307629887413770234" target="_blank" class="social-icon">
+                                                <i class="fa fa-google-plus"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="clear"></div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <div class="footerwidget">
-                            <h6>Social Media</h6>
-
-                            <div class="footer-social-icons">
-                                <h4 class="_14">Follow us on</h4>
-                                <ul class="social-icons">
-                                    <li>
-                                        <a href="https://www.facebook.com/IkusasaTech" target="_blank" class="social-icon">
-                                            <i class="fa fa-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://twitter.com/IkusasaTech" target="_blank" class="social-icon">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="" class="social-icon">
-                                            <i class="fa fa-youtube"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com/ikusasatechsolutions/" target="_blank" class="social-icon">
-                                            <i class="fa fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.linkedin.com/company/ikusasa-technology-solutions/" target="_blank" class="social-icon">
-                                            <i class="fa fa-linkedin"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://plus.google.com/u/1/103307629887413770234" target="_blank" class="social-icon">
-                                            <i class="fa fa-google-plus"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="clear"></div>
                         </div>
                     </div>
                 </div>
-            </div>
-    </div>
-
-    <div class="footer2">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="panel-body">
-                        <p class="simplenav">
-                            <a href="index.html">Home</a>
-
-                            |
-
-                            <a href="about.html">About Us</a>
-
-                            |
-
-                            <a href="consulting.html">Consulting</a>
-
-                            |
-
-                            <a href="training.html">Training</a>
-
-                            |
-
-                            <a href="blog.html">Blog</a>
-
-                            |
-
-                            <a href="contact.html">Contact Us</a>
-                        </p>
+        </div>
+    
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel-body">
+                            <p class="simplenav">
+                                <a href="index.html">Home</a>
+    
+                                |
+    
+                                <a href="about.html">About Us</a>
+    
+                                |
+    
+                                <a href="consulting.html">Consulting</a>
+    
+                                |
+    
+                                <a href="training.html">Training</a>
+    
+                                |
+    
+                                <a href="blog.html">Blog</a>
+    
+                                |
+    
+                                <a href="contact.html">Contact Us</a>
+                            </p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="panel-body">
-                        <p class="text-right">
-                            Copyright &copy; 2016 Ikusasa Technology Solutions.By
-
-                            <a href="www.ikusasatech.com" rel="develop">Ikusasa</a>
-                        </p>
+    
+                    <div class="col-md-6">
+                        <div class="panel-body">
+                            <p class="text-right">
+                                Copyright &copy; 2016 Ikusasa Technology Solutions.By
+    
+                                <a href="www.ikusasatech.com" rel="develop">Ikusasa</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </footer>
-    <!--=============================================Loading Transition==============================================-->
+        </footer>
+            <!--=============================================Loading Transition==============================================-->
 
-    <button class="scroll-top tran3s p-color-bg">
-        <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
-    </button>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="vendor/jquery.2.2.3.min.js"></script>
-    <script type="text/javascript" src="vendor/bootstrap/bootstrap.min.js"></script>
-    <script src="vendor/revolution/jquery.themepunch.tools.min.js"></script>
-    <script src="vendor/revolution/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript" src="vendor/revolution/revolution.extension.slideanims.min.js"></script>
-    <script type="text/javascript" src="vendor/revolution/revolution.extension.layeranimation.min.js"></script>
-    <script type="text/javascript" src="vendor/revolution/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="vendor/revolution/revolution.extension.kenburn.min.js"></script>
-    <script type="text/javascript" src="vendor/revolution/revolution.extension.actions.min.js"></script>
-    <script type="text/javascript" src="vendor/revolution/revolution.extension.video.min.js"></script>
-    <script type="text/javascript" src="vendor/owl-carousel/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="vendor/jquery.mixitup.min.js"></script>
-    <script type="text/javascript" src="vendor/skills-master/jquery.skills.js"></script>
-    <script type="text/javascript" src="vendor/contact-form/validate.js"></script>
-    <script type="text/javascript" src="vendor/contact-form/jquery.form.js"></script>
-    <script type="text/javascript" src="js/theme.js"></script>
-    <script type="text/javascript" src="js/recruit.js"></script>
-    <script type="text/javascript">function add_chatinline() { var hccid = 94367399; var nt = document.createElement("script"); nt.async = true; nt.src = "https://mylivechat.com/chatinline.aspx?hccid=" + hccid; var ct = document.getElementsByTagName("script")[0]; ct.parentNode.insertBefore(nt, ct); }
-        add_chatinline(); </script>
-    </div>
+            <button class="scroll-top tran3s p-color-bg">
+                <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+            </button>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script type="text/javascript" src="vendor/jquery.2.2.3.min.js"></script>
+            <script type="text/javascript" src="vendor/bootstrap/bootstrap.min.js"></script>
+            <script src="vendor/revolution/jquery.themepunch.tools.min.js"></script>
+            <script src="vendor/revolution/jquery.themepunch.revolution.min.js"></script>
+            <script type="text/javascript" src="vendor/revolution/revolution.extension.slideanims.min.js"></script>
+            <script type="text/javascript" src="vendor/revolution/revolution.extension.layeranimation.min.js"></script>
+            <script type="text/javascript" src="vendor/revolution/revolution.extension.navigation.min.js"></script>
+            <script type="text/javascript" src="vendor/revolution/revolution.extension.kenburn.min.js"></script>
+            <script type="text/javascript" src="vendor/revolution/revolution.extension.actions.min.js"></script>
+            <script type="text/javascript" src="vendor/revolution/revolution.extension.video.min.js"></script>
+            <script type="text/javascript" src="vendor/owl-carousel/owl.carousel.min.js"></script>
+            <script type="text/javascript" src="vendor/jquery.mixitup.min.js"></script>
+            <script type="text/javascript" src="vendor/skills-master/jquery.skills.js"></script>
+            <script type="text/javascript" src="vendor/contact-form/validate.js"></script>
+            <script type="text/javascript" src="vendor/contact-form/jquery.form.js"></script>
+            <script type="text/javascript" src="js/theme.js"></script>
+            <script type="text/javascript" src="js/recruit.js"></script>
+            <script type="text/javascript">function add_chatinline() { var hccid = 94367399; var nt = document.createElement("script"); nt.async = true; nt.src = "https://mylivechat.com/chatinline.aspx?hccid=" + hccid; var ct = document.getElementsByTagName("script")[0]; ct.parentNode.insertBefore(nt, ct); }
+                add_chatinline(); </script>
+            </div>
 </body>
 
 </html>
