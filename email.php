@@ -1,92 +1,48 @@
+
 <?php
-require_once 'PHPMailer-master/PHPMailerAutoload.php';
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-$yourName = $_POST['name'];
-	$yourEmail = $_POST['email'];
-	$subject = $_POST['subject'];
-	$yourMessage = $_POST['message'];
+        # FIX: Replace this email with recipient email
+        $mail_to = "info@ikusasatech.com";
+        
+        # Sender Data
+        $subject = trim($_POST["subject"]);
+        $name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["name"])));
+        $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+        $phone = trim($_POST["phone"]);
+        $message = trim($_POST["message"]);
+        
+        if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($phone) OR empty($subject) OR empty($message)) {
+            # Set a 400 (bad request) response code and exit.
+            http_response_code(400);
+            echo "Please complete the form and try again.";
+            exit;
+        }
+        
+        # Mail Content
+        $content = "Name: $name\n";
+        $content .= "Email: $email\n\n";
+        $content .= "Phone: $phone\n";
+        $content .= "Message:\n$message\n";
 
+        # email headers.
+        $headers = "From: $name &lt;$email&gt;";
 
-  $from = $yourEmail;
-  $to = "info@ikusasatech.com";
-  $subject = "Contact US Form from: " . $yourName;
-  $text = "Find the form";
-  $html = "Message: " . $yourMessage ;
-  $crlf = "\n";
+        # Send the email.
+        $success = mail($mail_to, $subject, $content, $headers);
+        if ($success) {
+            # Set a 200 (okay) response code.
+            http_response_code(200);
+            echo "Thank You! Your message has been sent.";
+        } else {
+            # Set a 500 (internal server error) response code.
+            http_response_code(500);
+            echo "Oops! Something went wrong, we couldn't send your message.";
+        }
 
-  // create a new Mail_Mime for use
-  $mime = new Mail_mime($crlf);
-  // define body for Text only receipt
-  $mime->setTXTBody($text);
-  // define body for HTML capable recipients
-  $mime->setHTMLBody($html);
-
-  // specify a file to attach below, relative to the script's location if not using an attachment, comment these lines out set appropriate MIME type for attachment you are using below, if applicable for reference see http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
-
-  //$file = $cv;
- // $mimetype = $cv;
-  //$mime->addAttachment($file, $mimetype);
-
-  // specify the SMTP server credentials to be used for delivery if using a third party mail service, be sure to use their hostname
-  $host = "mail.ikusasatech.com";
-  $username = "thuli@ikusasatech.com";
-  $password = "Mtho@21035";
-
-  $headers = array ('From' => $from,
-    'To' => $to,
-    'Subject' => $subject);
-  $smtp = Mail::factory('smtp',
-    array ('host' => $host,
-      'auth' => true,
-      'username' => $username,
-      'password' => $password));
-
-
-  $body = $mime->get();
-  $headers = $mime->headers($headers);
-
-  $mail = $smtp->send($to, $headers, $body);
-
-   $dbhost = 'pdb20.biz.nf';
-      $dbuser = '2524212_ikusasa';
-      $dbpass = 'Mtho@21035';
-      $conn = mysql_connect($dbhost, $dbuser, $dbpass);
-
-      if(! $conn ) {
-         die('Failed to connect: ' . mysql_error());
-      }
-
-   
-
-      $sql = "INSERT INTO users_tbl ".
-         "(userName,userEmail,userMessage) ".
-         "VALUES"."('$yourName','$yourEmail','$yourMessage')";
-
-      mysql_select_db('2524212_ikusasa');
-      $retval = mysql_query( $sql, $conn );
-      
-      if(! $retval ) {
-         die('Could not enter data: ' . mysql_error());
-      }
-
-      echo "Entered data successfully\n";
-      mysql_close($conn);
-      
- if($mail){
-    mail($yourEmail,'Auto Reply','Thank you for contacting us we will get back to you asap to your message: ' . $yourMessage,'From: info@ikusasatech.com');
-  }
-  if (PEAR::isError($mail)) {
-    echo("
-    " . $mail->getMessage() . "
-    ");
-  } else {
-    echo("
-    Message successfully sent!
-    ");
-    $message2 = "Sent successfully";
-  }
-
+        } else {
+            # Not a POST request, set a 403 (forbidden) response code.
+            http_response_code(403);
+            echo "There was a problem with your submission, please try again.";
+        }
 ?>
-
-
-

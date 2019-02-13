@@ -516,6 +516,7 @@ ul.social-icons {
 
 .main {
   margin-top: 12%; /* Same as the width of the sidenav */
+  margin-left: 5%;
 }
 
 @media screen and (max-height: 450px) {
@@ -2158,60 +2159,79 @@ footer {
 Consulting 
 =============================================================
 ***/
-.mega ul{
-  margin: 0px;
-  padding: 0px;
-  text-transform: uppercase;
-  color: #006188;
-  font-weight: 700;
-  background: transparent;
-  padding: 9px 15px;
+.train{
+  font-size: 11px !important;
 }
-.mega ul li{
-  background-color: white;
-  width: 150px;
-  border: 1px solid white;
-  color: #006188;
-  text-align: center;
-  position: relative;
-  cursor: pointer;
-}
-.mega ul li a {
-  color: #006188;
-}
-.mega ul li:hover{
-  background-color: #b8b392;
-  color: #800000;
-}
-.mega ul ul{
+
+
+.dropdown-menu a ul{
+ margin-left: 150px;
   display: none;
+ 
+}
+.dropdown-menu a:hover ul{
+  display: block;
   height: 10px;
+  width: 10px;
+  float: left;
+  background-color: white;
 }
-.mega ul li:hover ul{
-  display: block;
-  color: #800000;
+.dropdown-menu a ul li{
+
+  background-color: white;
+  height: 10px;
+  width: 10px;
+
 }
-.drop-m{
-  display: none;
+.dropdown-submenu{ 
+  position: relative; 
+  margin: 5px;
+  font-size: 11px !important;
 }
-.dropdown-m:hover .drop-m{
-  display: block;
+.dropdown-submenu>.dropdown-menu{
+  top:0;
+  left:100%;
+  margin-top:-6px;
+  margin-left:5px;
+  -webkit-border-radius:0 6px 6px 6px;
+  -moz-border-radius:0 6px 6px 6px;
+  border-radius:0 6px 6px 6px;
+  font-size: 11px;
+    padding: 2px;
 }
-.mega ul ul li{
-  margin-left: 140px;
-  top: -35px;
-  cursor: pointer;
-  width: 200px;
+.dropdown-submenu>a:after{
+  display:block;
+  content:" ";
+  float:right;
+  width:0;
+  height:0;
+  border-color:transparent;
+  border-style:solid;
+  border-width:5px 0 5px 5px;
+  border-left-color:#006188;
+  margin-top: 15px;
+  margin-right: -7px;
 }
-.mega li:hover{
-  display: block;
-  
+.dropdown-submenu:hover>a:after{
+  border-left-color:#800000;
+}
+.dropdown-submenu.pull-left{ float: none; }
+.dropdown-submenu.pull-left>.dropdown-menu{
+  left: -100%;
+  margin-left: 10px;
+  -webkit-border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
 }
 
-
-
-
-
+/*
+@media (min-width: 768px) { 
+}
+@media (min-width: 992px) { 
+}
+@media (min-width: 1200px) { 
+}
+*/
 
 @-webkit-keyframes glowing {
   0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }

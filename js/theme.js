@@ -8,7 +8,16 @@ Mega- Menu Link
 /*---------------------
    Testimonial carousel
   ---------------------*/
-  
+  (function($){
+    $(document).ready(function(){
+      $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+        event.preventDefault(); 
+        event.stopPropagation(); 
+        $(this).parent().siblings().removeClass('open');
+        $(this).parent().toggleClass('open');
+      });
+    });
+  })(jQuery);
   var test_carousel = $('.testimonial-carousel');
   test_carousel.owlCarousel({
     loop: true,
@@ -98,64 +107,51 @@ $('.get-more').on('click', function () {
   $('.get-more').addClass('hide');
   $('.more-about').removeClass('hide');
 });
-$('.ibm-card,.ibm-ref').on('click', function () {
 
-  $('.footer-bottom').addClass('hide');
-  $('.modal-title').text('IBM BOOKING');
-  $('.train-side').removeClass('hide');
-  $('.overview-tab').on('click', function () {
-    $('.outlines,.Schedules,.online-training,.Certification').addClass('hide');
-    $('.overview').removeClass('hide');
-  });
-  $('.course-outline-tab').on('click', function () {
-    $('.overview,.Certification,.online-training,.Schedules').addClass('hide');
-    $('.outlines').removeClass('hide');
-  });
-  $('.schedule-tab').on('click', function () {
-    $('.overview,.outlines,.online-training,.Certification').addClass('hide');
-    $('.Schedules').removeClass('hide');
-  });
-  $('.certification-tab').on('click', function () {
-    $('.overview,.outlines,.Schedules,.online-training').addClass('hide');
-    $('.Certification').removeClass('hide');
-  });
-  $('.online-tab').on('click', function () {
-    $('.overview,.Certification,.Schedules,.outlines').addClass('hide');
-    $('.online-training').removeClass('hide');
-  });
-
-  $('.training,.certificate-section,.microsoft-section,.dmi-section,.comptia-section,.business-section').addClass("hide");
-
+//IBM Marketing Script Start
+$('.overview-tab-ibm').on('click', function () {
+  $('.outlines-ibm,.Schedules-ibm,.online-training-ibm,.Certification-ibm').addClass('hide');
+  $('.overview-ibm').removeClass('hide');
 });
-$('.microsoft-card').on('click', function () {
-  $('.ibm-section,.dmi-section,.comptia-section,.business-section').addClass('hide');
-  $('.microsoft-section').removeClass('hide');
-  $('.footer-bottom').addClass('hide');
-  $('.modal-title').text('MICROSOFT BOOKING');
-  $('.train-side').removeClass('hide');
-  $('.overview-tab').on('click', function () {
-    $('.outlines,.Schedules,.online-training,.Certification').addClass('hide');
-    $('.overview').removeClass('hide');
-  });
-  $('.course-outline-tab').on('click', function () {
-    $('.overview,.Certification,.online-training,.Schedules').addClass('hide');
-    $('.outlines').removeClass('hide');
-  });
-  $('.schedule-tab').on('click', function () {
-    $('.overview,.outlines,.online-training,.Certification').addClass('hide');
-    $('.Schedules').removeClass('hide');
-  });
-  $('.certification-tab').on('click', function () {
-    $('.overview,.outlines,.Schedules,.online-training').addClass('hide');
-    $('.Certification').removeClass('hide');
-  });
-  $('.online-tab').on('click', function () {
-    $('.overview,.Certification,.Schedules,.outlines').addClass('hide');
-    $('.online-training').removeClass('hide');
-  });
-
-  $('.training,.certificate-section').addClass("hide");
+$('.course-outline-tab-ibm').on('click', function () {
+  $('.overview-ibm,.Certification-ibm,.online-training-ibm,.Schedules-ibm').addClass('hide');
+  $('.outlines-ibm').removeClass('hide');
 });
+$('.schedule-tab-ibm').on('click', function () {
+  $('.overview-ibm,.outlines-ibm,.online-training-ibm,.Certification-ibm').addClass('hide');
+  $('.Schedules-ibm').removeClass('hide');
+});
+$('.certification-tab-ibm').on('click', function () {
+  $('.overview-ibm,.outlines-ibm,.Schedules-ibm,.online-training-ibm').addClass('hide');
+  $('.Certification-ibm').removeClass('hide');
+});
+$('.online-tab-ibm').on('click', function () {
+  $('.overview-ibm,.Certification-ibm,.Schedules-ibm,.outlines-ibm').addClass('hide');
+  $('.online-training-ibm').removeClass('hide');
+});
+//IBM Marketing Script End
+//Microsoft Marketing Script Start
+$('.overview-tab-microsoft').on('click', function () {
+  $('.outlines-microsoft,.Schedules-microsoft,.online-training-microsoft,.Certification-microsoft').addClass('hide');
+  $('.overview-microsoft').removeClass('hide');
+});
+$('.course-outline-tab-microsoft').on('click', function () {
+  $('.overview-microsoft,.Certification-microsoft,.online-training-microsoft,.Schedules-microsoft').addClass('hide');
+  $('.outlines-microsoft').removeClass('hide');
+});
+$('.schedule-tab-microsoft').on('click', function () {
+  $('.overview-microsoft,.outlines-microsoft,.online-training-microsoft,.Certification-microsoft').addClass('hide');
+  $('.Schedules-microsoft').removeClass('hide');
+});
+$('.certification-tab-microsoft').on('click', function () {
+  $('.overview-microsoft,.outlines-microsoft,.Schedules-microsoft,.online-training-microsoft').addClass('hide');
+  $('.Certification-microsoft').removeClass('hide');
+});
+$('.online-tab-microsoft').on('click', function () {
+  $('.overview-microsoft,.Certification-microsoft,.Schedules-microsoft,.outlines-microsoft').addClass('hide');
+  $('.online-training-microsoft').removeClass('hide');
+});
+//Microsoft Marketing Script End
 //Digital Marketing Script Start
 $('.dmi-card').on('click', function () {
   window.location.href = "digital-marketing-training.html";
@@ -181,64 +177,50 @@ $('.online-tab-dmi').on('click', function () {
   $('.online-training-dmi').removeClass('hide');
 });
 //Digital Marketing Script End
-$('.comptia-card').on('click', function () {
-  $('.ibm-section,.microsoft-section,.dmi-section,.business-section').addClass('hide');
-  $('.comptia-section').removeClass('hide');
-  $('.footer-bottom').addClass('hide');
-  $('.modal-title').text('CompTIA BOOKING');
-  $('.train-side').removeClass('hide');
-  $('.overview-tab').on('click', function () {
-    $('.outlines,.Schedules,.online-training,.Certification').addClass('hide');
-    $('.overview').removeClass('hide');
-  });
-  $('.course-outline-tab').on('click', function () {
-    $('.overview,.Certification,.online-training,.Schedules').addClass('hide');
-    $('.outlines').removeClass('hide');
-  });
-  $('.schedule-tab').on('click', function () {
-    $('.overview,.outlines,.online-training,.Certification').addClass('hide');
-    $('.Schedules').removeClass('hide');
-  });
-  $('.certification-tab').on('click', function () {
-    $('.overview,.outlines,.Schedules,.online-training').addClass('hide');
-    $('.Certification').removeClass('hide');
-  });
-  $('.online-tab').on('click', function () {
-    $('.overview,.Certification,.Schedules,.outlines').addClass('hide');
-    $('.online-training').removeClass('hide');
-  });
-
-  $('.training,.certificate-section').addClass("hide");
+//COMPTIA Marketing Script Start
+$('.overview-tab-comptia').on('click', function () {
+  $('.outlines-comptia,.Schedules-comptia,.online-training-comptia,.Certification-comptia').addClass('hide');
+  $('.overview-comptia').removeClass('hide');
 });
-$('.business-card').on('click', function () {
-  $('.ibm-section,.microsoft-section,.dmi-section,.comptia-section').addClass('hide');
-  $('.business-section').removeClass('hide');
-  $('.footer-bottom').addClass('hide');
-  $('.modal-title').text('Business Management BOOKING');
-  $('.train-side').removeClass('hide');
-  $('.overview-tab').on('click', function () {
-    $('.outlines,.Schedules,.online-training,.Certification').addClass('hide');
-    $('.overview').removeClass('hide');
-  });
-  $('.course-outline-tab').on('click', function () {
-    $('.overview,.Certification,.online-training,.Schedules').addClass('hide');
-    $('.outlines').removeClass('hide');
-  });
-  $('.schedule-tab').on('click', function () {
-    $('.overview,.outlines,.online-training,.Certification').addClass('hide');
-    $('.Schedules').removeClass('hide');
-  });
-  $('.certification-tab').on('click', function () {
-    $('.overview,.outlines,.Schedules,.online-training').addClass('hide');
-    $('.Certification').removeClass('hide');
-  });
-  $('.online-tab').on('click', function () {
-    $('.overview,.Certification,.Schedules,.outlines').addClass('hide');
-    $('.online-training').removeClass('hide');
-  });
-
-  $('.training,.certificate-section').addClass("hide");
+$('.course-outline-tab-comptia').on('click', function () {
+  $('.overview-comptia,.Certification-comptia,.online-training-comptia,.Schedules-comptia').addClass('hide');
+  $('.outlines-comptia').removeClass('hide');
 });
+$('.schedule-tab-comptia').on('click', function () {
+  $('.overview-comptia,.outlines-comptia,.online-training-comptia,.Certification-comptia').addClass('hide');
+  $('.Schedules-comptia').removeClass('hide');
+});
+$('.certification-tab-comptia').on('click', function () {
+  $('.overview-comptia,.outlines-comptia,.Schedules-comptia,.online-training-comptia').addClass('hide');
+  $('.Certification-comptia').removeClass('hide');
+});
+$('.online-tab-comptia').on('click', function () {
+  $('.overview-comptia,.Certification-comptia,.Schedules-comptia,.outlines-comptia').addClass('hide');
+  $('.online-training-comptia').removeClass('hide');
+});
+//COMPTIA Marketing Script End
+//BUSINESS Marketing Script Start
+$('.overview-tab-business').on('click', function () {
+  $('.outlines-business,.Schedules-business,.online-training-business,.Certification-business').addClass('hide');
+  $('.overview-business').removeClass('hide');
+});
+$('.course-outline-tab-business').on('click', function () {
+  $('.overview-business,.Certification-business,.online-training-business,.Schedules-business').addClass('hide');
+  $('.outlines-business').removeClass('hide');
+});
+$('.schedule-tab-business').on('click', function () {
+  $('.overview-business,.outlines-business,.online-training-business,.Certification-business').addClass('hide');
+  $('.Schedules-business').removeClass('hide');
+});
+$('.certification-tab-business').on('click', function () {
+  $('.overview-business,.outlines-business,.Schedules-business,.online-training-business').addClass('hide');
+  $('.Certification-business').removeClass('hide');
+});
+$('.online-tab-business').on('click', function () {
+  $('.overview-business,.Certification-business,.Schedules-business,.outlines-business').addClass('hide');
+  $('.online-training-business').removeClass('hide');
+});
+//BUSINESS Marketing Script End
 //Project Script Start
 $('.project-card').on('click', function () {
   window.location.href = "ProjectManagement.html";
@@ -560,54 +542,51 @@ function partnersLogo() {
 
 
 //Contact Form Validation
-function contactFormValidation() {
-  var activeForm = $('.form-validation');
-  if (activeForm.length) {
-    activeForm.validate({ // initialize the plugin
-      rules: {
-        Fname: {
-          required: true
-        },
-        Lname: {
-          required: true
-        },
-        email: {
-          required: true,
-          email: true
-        },
-        sub: {
-          required: true
-        },
-        message: {
-          required: true
-        }
-      },
-      submitHandler: function (form) {
-        $(form).ajaxSubmit({
-          success: function () {
-            $('.form-validation :input').attr('disabled', 'disabled');
-            activeForm.fadeTo("slow", 1, function () {
-              $(this).find(':input').attr('disabled', 'disabled');
-              $(this).find('label').css('cursor', 'default');
-              $('#alert-success').fadeIn();
-            });
-          },
-          error: function () {
-            activeForm.fadeTo("slow", 1, function () {
-              $('#alert-error').fadeIn();
-            });
-          }
-        });
-      }
-    });
+jQuery(document).on('ready', function () {
+
+  var form = $('.contact__form'),
+      message = $('.contact__msg'),
+      form_data;
+  // Success function
+  function done_func(response) {
+      
+      message.fadeIn().removeClass('alert-danger').addClass('alert-success');
+      message.text(response);
+      setTimeout(function () {
+          message.fadeOut();
+      }, 2000);
+      form.find('input:not([type="submit"]), textarea').val('');
+      return false;
   }
-}
+  // fail function
+  function fail_func(data) {
+      message.fadeIn().removeClass('alert-success').addClass('alert-success');
+      message.text(data.responseText);
+      setTimeout(function () {
+          message.fadeOut();
+      }, 2000);
+      return false;
+  }
+  
+  form.submit(function (e) {
+      e.preventDefault();
+      form_data = $(this).serialize();
+      $.ajax({
+          type: 'POST',
+          url: 'email.php',
+          data: form_data
+      })
+      .done(done_func)
+      .fail(fail_func);
+  });
+ 
+});
 
 // Close suddess Alret
 function closeSuccessAlert() {
   var closeButton = $(".closeAlert");
   if (closeButton.length) {
-    closeButton.on('click', function () {
+    closeButton.on('click', function  () {
       $(".alert-wrapper").fadeOut();
     });
     closeButton.on('click', function () {
@@ -651,7 +630,7 @@ function subMenuExpend() {
 
 // DOM ready function
 jQuery(document).on('ready', function () {
-  (function ($) {
+
     removePlaceholder();
     scrollToTop();
     BannerVideoSlider();
@@ -664,15 +643,13 @@ jQuery(document).on('ready', function () {
     closeSuccessAlert();
     cladendar();
     subMenuExpend()
-  })(jQuery);
+ 
 });
 
 
 // Window scroll function
 jQuery(window).on('scroll', function () {
-  (function ($) {
     stickyHeader()
-  })(jQuery);
 });
 
 (function(){
