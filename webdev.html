@@ -238,10 +238,10 @@
                             <div class="theme-title">
                                 <div id="quotecalculator">
                                     <div id="cats">
-                                        <label class="justalabel">Site Type:</label>
-                                        <label class="justalabel">Number of Pages:</label>
+                                        <label class="justalabel">Company Type:</label>
+                                        <label class="justalabel">Application Type:</label>
+                                        <label class="justalabel">Website Pages:</label>
                                         <label class="justalabel">Responsive:</label>
-                                        <label class="justalabel">Online Store:</label>
                                         <label class="justalabel">SEO:</label>
                                         <label class="justalabel">Google Analytics:</label>
                                         <label class="justalabel">Social Media:</label>
@@ -255,14 +255,23 @@
                                             <option value="2">E-Commerse/Mid-Sized Business</option>
                                             <option value="3">Custom Project/Large Business</option>
                                         </select>
-                                        <!--ENDS TYPE-->
+                                        <!--ENDS Type-->
+                                    <div id="toggles">
+                                        <select id="app" name="app" value="app">
+                                            <option value="0">Select App Type</option>
+                                            <option value="1">Native Application</option>
+                                            <option value="2">Hybrid Application</option>
+                                            <option value="3">Web Application</option>
+                                        </select>
+                                        <!--ENDS  App TYPE-->
                                         <select id="pages" name="pages" value="pages">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6+</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1-5</option>
+                                            <option value="2">5-10</option>
+                                            <option value="3">10-15</option>
+                                            <option value="4">15-20</option>
+                                            <option value="5">20-25</option>
+                                            <option value="6">25+</option>
                                         </select>
                                         <!--ENDS TYPE-->
                                         <label id="optionresponsive" class="switch">
@@ -270,11 +279,6 @@
                                             <span class="slider round"></span>
                                         </label>
                                         <!--ENDS OPTIONRESPONSIVE-->
-                                        <label id="optionstore" class="switch">
-                                            <input id="optionstore" type="checkbox">
-                                            <span class="slider round"></span>
-                                        </label>
-                                        <!--ENDS OPTIONSTORE-->
                                         <label id="optionseo" class="switch">
                                             <input id="optionseo" type="checkbox">
                                             <span class="slider round"></span>

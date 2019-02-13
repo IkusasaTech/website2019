@@ -4,11 +4,11 @@ Web development quote
 =====================================
 */
 var optionresponsive = true;
-var optionstore = true;
 var optionseo = true;
 var optiongoogle = true;
 var optionsocial = true;
 var totalPrice = 0;
+var priceApp = 0;
 var priceType = 0;
 var pricePages = 0;
 var finalPrice = 0;
@@ -26,11 +26,26 @@ $("#type").on("change", function() {
   }
   getTotal();
 });
+
+//SITE App TYPE
+$("#app").on("change", function() {
+  var selectedapp = $("#app option:selected").val();
+  if (selectedapp == 0 || selectedapp == null) {
+    priceApp = 0;
+  } else if (selectedapp == 1) {
+    priceApp = 400;
+  } else if (selectedapp == 2) {
+    priceApp = 600;
+  } else if (selectedapp == 3) {
+    priceApp = 1000;
+  }
+  getTotal();
+});
 // NUMBER OF PAGES
 $("#pages").on("change", function() {
   var selectedPages = $("#pages option:selected").val();
   if (selectedPages == 0) {
-    pricePages = 100;
+    pricePages = 0;
   } else if (selectedPages == 1) {
     pricePages = 200;
   } else if (selectedPages == 2) {
@@ -41,13 +56,15 @@ $("#pages").on("change", function() {
     pricePages = 500;
   } else if (selectedPages == 5) {
     pricePages = 600;
+  }else if (selectedPages == 6){
+    pricePages = 1500;
   }
   getTotal();
 });
 //RESPONSIVE
 $("label #optionresponsive").on("click", function() {
   if (optionresponsive == true) {
-    totalPrice += 100;
+    totalPrice = 100;
     optionresponsive = false;
   } else {
     totalPrice -= 100;
@@ -55,32 +72,22 @@ $("label #optionresponsive").on("click", function() {
   }
   getTotal();
 });
-//ONLINE STORE
-$("label #optionstore").on("click", function() {
-    if (optionstore == true) {
-    totalPrice += 350;
-    optionstore = false;
-  } else {
-    totalPrice -= 350;
-    optionstore = true;
-  }
-  getTotal();
-});
+
 //SEO
-$("label #optionseo").on("click", function() {
-    if (optionseo == true) {
-    totalPrice += 100;
+$("label #optionSEO").on("click", function() {
+  if (optionseo == true) {
+    totalPrice = 100;
     optionseo = false;
   } else {
     totalPrice -= 100;
-    optionseo= true;
+    optionseo = true;
   }
   getTotal();
 });
 //GOOGLE ANALYTICS
-$("label #optiongoogle").on("click", function() {
+$("label #optionGoogle Analytics").on("click", function() {
     if (optiongoogle == true) {
-    totalPrice += 50;
+    totalPrice = 50;
     optiongoogle = false;
   } else {
     totalPrice -= 50;
@@ -89,7 +96,7 @@ $("label #optiongoogle").on("click", function() {
   getTotal();
 });
 //SOCIAL MEDIA
-$("label #optionsocial").on("click", function() {
+$("label #optionSocial Media").on("click", function() {
     if (optionsocial == true) {
     totalPrice += 60;
     optionsocial = false;
@@ -101,8 +108,8 @@ $("label #optionsocial").on("click", function() {
 });
 
 function getTotal() {
-  console.log("Function " + pricePages);
-  finalPrice = totalPrice + priceType + pricePages; //calculates the total price based on the options
+  console.log("Function " + pricePages + priceApp);
+  finalPrice = totalPrice + priceType + priceApp + pricePages; //calculates the total price based on the options
   finalPrice = Math.round(finalPrice); //ensures that the price is a whole number
   $("#totalestimate").html("R" + finalPrice); //adds the price to the user interface
 }
@@ -208,7 +215,7 @@ var optiondesignB = false;
 var priceTypeB = 0;
 var pricePagesB = 0;
 var totalPriceB = 0;
-var pricePagesC = 0;
+var cardsB = 0;
 var finalPriceB = 0;
 
 //SITE TYPE
@@ -246,24 +253,23 @@ $("#pagesB").on("change", function() {
   getTotalB();
 });
 // NUMBER OF PAGES
-$("#pagesB").on("change", function() {
-  var selectedPagesC = $("#pagesB option:selected").val();
-  if (selectedPagesC == 6) {
-    pricePagesB = 0;
-  } else if (selectedPagesC == 7) {
-    pricePagesC = 200;
-  } else if (selectedPagesB == 8) {
-    pricePagesC = 300 ;
-  } else if (selectedPages == 9) {
-    pricePagesC = 400;
-  } else if (selectedPagesC == 10) {
-    pricePagesC = 500;
-  } else if (selectedPagesC == 11) {
-    pricePagesC = 600;
+$("#cardsB").on("change", function() {
+  var selectedcardsB = $("#cardsB option:selected").val();
+  if (selectedcardsB == 0) {
+    pricecardsB = 0;
+  } else if (selectedcardsB == 1) {
+    pricecardsB = 200;
+  } else if (selectedcardsB == 2) {
+    pricecardsB = 300 ;
+  } else if (selectedcardsB == 3) {
+    pricecardsB = 400;
+  } else if (selectedcardsB == 4) {
+    pricecardsB = 500;
+  } else if (selectedcardsB == 5) {
+    pricecardsB = 600;
   }
-  getTotalC();
+  getTotalB();
 });
-alert("Sompisi");
 //website
 $("label #optionwebsiteB").on("click", function() {
   if (optionwebsiteB == false) {
@@ -309,14 +315,8 @@ $("label #optiondesignB").on("click", function() {
 getTotalB();
 });
 function getTotalB() {
-  console.log("Function" + pricePagesB + pricePagesB)
- finalPriceB = (totalPriceB + priceTypeB + pricePagesB + pricePagesB);
- finalPriceB = Math.round(finalPriceB);
- $("#totalestimateB").html("R" + finalPriceB);
-};
-function getTotalC() {
-  console.log("Function" + pricePagesC + pricePagesC)
- finalPriceB = (totalPriceB + priceTypeB + pricePagesC + pricePagesC);
+  console.log("Function" + pricePagesB + pricePagesB + pricecardsB)
+ finalPriceB = (totalPriceB + priceTypeB + pricePagesB + pricecardsB);
  finalPriceB = Math.round(finalPriceB);
  $("#totalestimateB").html("R" + finalPriceB);
 };
@@ -334,7 +334,7 @@ var priceTypeO = 0;
 var pricePagesO = 0;
 var finalPriceO = 0;
 //SITE TYPE
-$("#type").on("change", function() {
+$("#typeO").on("change", function() {
   var selectedTypeO = $("#type option:selected").val();
   if (selectedTypeO == 0 || selectedTypeO == null) {
     priceTypeO = 0;
@@ -358,6 +358,7 @@ $("label #optionseoO").on("click", function() {
   }
   getTotalO();
 });
+alert('hello');
 //ONLINE STORE
 $("label #optionstore").on("click", function() {
     if (optionstore == true) {
@@ -408,4 +409,120 @@ function getTotalO() {
   finalPriceO = totalPriceO + priceTypeO + pricePagesO; //calculates the total price based on the options
   finalPriceO = Math.round(finalPriceO); //ensures that the price is a whole number
   $("#totalestimateO").html("R" + finalPriceO); //adds the price to the user interface
+}
+
+/*
+=====================================
+Online Marketing quote
+=====================================
+*/
+var optionresponsive = true;
+var optionseo = true;
+var optiongoogle = true;
+var optionsocial = true;
+var totalPrice = 0;
+var priceApp = 0;
+var priceType = 0;
+var pricePages = 0;
+var finalPrice = 0;
+//SITE TYPE
+$("#type").on("change", function() {
+  var selectedType = $("#type option:selected").val();
+  if (selectedType == 0 || selectedType == null) {
+    priceType = 0;
+  } else if (selectedType == 1) {
+    priceType = 400;
+  } else if (selectedType == 2) {
+    priceType = 600;
+  } else if (selectedType == 3) {
+    priceType = 1000;
+  }
+  getTotal();
+});
+
+//SITE App TYPE
+$("#app").on("change", function() {
+  var selectedapp = $("#app option:selected").val();
+  if (selectedapp == 0 || selectedapp == null) {
+    priceApp = 0;
+  } else if (selectedapp == 1) {
+    priceApp = 400;
+  } else if (selectedapp == 2) {
+    priceApp = 600;
+  } else if (selectedapp == 3) {
+    priceApp = 1000;
+  }
+  getTotal();
+});
+// NUMBER OF PAGES
+$("#pages").on("change", function() {
+  var selectedPages = $("#pages option:selected").val();
+  if (selectedPages == 0) {
+    pricePages = 0;
+  } else if (selectedPages == 1) {
+    pricePages = 200;
+  } else if (selectedPages == 2) {
+    pricePages = 300 ;
+  } else if (selectedPages == 3) {
+    pricePages = 400;
+  } else if (selectedPages == 4) {
+    pricePages = 500;
+  } else if (selectedPages == 5) {
+    pricePages = 600;
+  }else if (selectedPages == 6){
+    pricePages = 1500;
+  }
+  getTotal();
+});
+//RESPONSIVE
+$("label #optionResponsive").on("click", function() {
+  if (optionresponsive == true) {
+    totalPrice = 100;
+    optionresponsive = false;
+  } else {
+    totalPrice -= 100;
+    optionresponsive = true;
+  }
+  getTotal();
+});
+
+//SEO
+$("label #optionSEO").on("click", function() {
+  if (optionseo == true) {
+    totalPrice = 100;
+    optionseo = false;
+  } else {
+    totalPrice -= 100;
+    optionseo = true;
+  }
+  getTotal();
+});
+//GOOGLE ANALYTICS
+$("label #optionGoogle Analytics").on("click", function() {
+    if (optiongoogle == true) {
+    totalPrice = 50;
+    optiongoogle = false;
+  } else {
+    totalPrice -= 50;
+    optiongoogle = true;
+  }
+  getTotal();
+});
+//SOCIAL MEDIA
+$("label #optionSocial Media").on("click", function() {
+    if (optionsocial == true) {
+    totalPrice += 60;
+    optionsocial = false;
+  } else {
+    totalPrice -= 60;
+    optionsocial = true;
+  }
+  getTotal();
+});
+
+function getTotal() {
+  console.log("Function " + pricePages + priceApp);
+  finalPrice = totalPrice + priceType + priceApp + pricePages; //calculates the total price based on the options
+  finalPrice = Math.round(finalPrice); //ensures that the price is a whole number
+  $("#totalestimate").html("R" + finalPrice); //adds the price to the user interface
 }
