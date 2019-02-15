@@ -521,10 +521,10 @@ $("label #optionSocial Media").on("click", function() {
 });
 
 function getTotal() {
-  console.log("Function " + pricePages + priceApp);
-  finalPrice = totalPrice + priceType + priceApp + pricePages; //calculates the total price based on the options
-  finalPrice = Math.round(finalPrice); //ensures that the price is a whole number
-  $("#totalestimate").html("R" + finalPrice); //adds the price to the user interface
+  console.log("Function " + pricePagesT + priceAppT);
+  finalPrice = totalPriceT + priceTypeT + priceAppT + pricePagesT; //calculates the total price based on the options
+  finalPriceT = Math.round(finalPriceT); //ensures that the price is a whole number
+  $("#totalestimateT").html("R" + finalPriceT); //adds the price to the user interface
 }
 
 
@@ -558,9 +558,20 @@ $("#typeT").on("change", function() {
   getTotalT();
 });
 //SITE Assurance TYPE
+$("label #optioninfrastructureT").on("click", function() {
+  if (optioninfrastructureT == true) {
+    totalPriceT += 100;
+    optioninfrastructureT = false;
+  } else {
+    totalPriceT -= 100;
+    optioninfrastructureT = true;
+  }
+  getTotalT();
+});
+//SITE infrastructure TYPE
 $("label #optionassuranceT").on("click", function() {
   if (optionassuranceT == true) {
-    totalPriceT = 100;
+    totalPriceT += 100;
     optionassuranceT = false;
   } else {
     totalPriceT -= 100;
@@ -568,10 +579,22 @@ $("label #optionassuranceT").on("click", function() {
   }
   getTotalT();
 });
+//SITE Assurance TYPE
+$("label #optioncomplienceT").on("click", function() {
+  if (optioncomplienceT == true) {
+    totalPriceT = 100;
+    optioncomplienceT = false;
+  } else {
+    totalPriceT -= 100;
+    optioncomplienceT = true;
+  }
+  getTotalT();
+});
 
-//Infrastructure
+
+//ATTACK
 $("label #optionattackT").on("click", function() {
-  if (optioninattackT == true) {
+  if (optionattackT == true) {
     totalPriceT = 100;
     optionattackT = false;
   } else {
@@ -580,10 +603,10 @@ $("label #optionattackT").on("click", function() {
   }
   getTotalT();
 });
-//SOCIAL MEDIA
+//FUNCTION
 function getTotalT() {
   console.log("Function " + priceTypeT);
   finalPriceT = totalPriceT + priceTypeT; //calculates the total price based on the options
   finalPriceT = Math.round(finalPriceT); //ensures that the price is a whole number
-  $("#totalestimate").html("R" + finalPriceT); //adds the price to the user interface
+  $("#totalestimateT").html("R" + finalPriceT); //adds the price to the user interface
 }

@@ -30,3 +30,11 @@ $("#DateCountdown").TimeCircles({
         }
 });
 
+$('form').submit(function(e){
+    e.preventDefault();
+    $('.flipping-form .wrapper').addClass('flipped');
+    
+    setTimeout(function(){
+        $('.flipping-form .wrapper').removeClass('flipped');
+      }, 5000);
+  });
