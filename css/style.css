@@ -2302,10 +2302,34 @@ h3{
 
 
 /*******
- GENERAL
+ JobPost style
 *********/
 
-#overlay{
+
+
+.jobpost #container{
+  height: auto;
+  width: 80%;
+   margin: 0 auto;
+  
+}
+
+
+.jobpost #side-nav{
+  float: left;
+  width: 20%;  
+  margin-top: -14px;
+}
+
+.jobpost #content {
+  width: 78%; 
+  float: right;  
+}
+
+
+
+/*********
+ Font#overlay{
   background-color: rgb(233,233,233);  
 }
 
@@ -2323,35 +2347,11 @@ h3{
 }
 
 
-
-#container{
-  height: auto;
-  width: 80%;
-   margin: 0 auto;
-  
-}
-
-
-#side-nav{
-  float: left;
-  width: 20%;  
-  margin-top: -14px;
-}
-
-#content {
-  width: 78%; 
-  float: right;  
-}
-
-
-
-/*********
- Font
 *********/
 
 
 
-h1{
+.jobpost h1{
   color: rgb(0,155,217);
 }
 
@@ -2361,50 +2361,36 @@ h1{
 
 
 
-#nav ul li:hover{
+.jobpost #nav ul li:hover{
   background-color: rgb(0,177,237);
 }
 
-#nav a {
+.jobpost #nav a {
   text-decoration: none;
   font-size: 150%;
   color: rgb(230,230,230);
 }
 
-.wrap-nav {
+.jobpost .wrap-nav {
   float: right;
   
 }
 
-.login{
+.jobpost .login{
   float: right;
 }
 
-.search {
-  float: left;    
-}
 
-.search input{
-/*   display: inline-block; */
-  padding: 11px 50px;
-  border-radius: 7px;
-  box-shadow: 0px 0px 3px rgb(99,99,99);
-  margin: 17px 5px;
-  border: 1px solid #e5e5e5;
-}
 
-.search input[type="submit"]{
-  border: 1px solid rgb(222,222,222);
-  
-  box-shadow: 0 0 3px rgb(22,22,22);
-}
+
+
 
 div.login{
  
   
 }
 
-.login ul li{
+.jobpost .login ul li{
   display: inline-block;
   background-color: rgb(0,155,217);
   padding: 8px 50px;
@@ -2415,7 +2401,7 @@ div.login{
   
 }
 
-.login ul li:hover{
+.jobpost .login ul li:hover{
   background-color: rgb(0,177,237);
 }
 
@@ -2423,14 +2409,14 @@ div.login{
 nav2
 *****/
 
-.nav2 {
+.jobpost .nav2 {
   height: 800px;
   background-color: white;
   width: 100%;
   box-shadow: 0px 0px 5px rgb(111,111,111);
   margin: 20px 0;
 }
-.nav2 ul li{
+.jobpost .nav2 ul li{
   align-content: flex-start | flex-end | center | space-between | space-around | stretch;
   
 }
@@ -2444,7 +2430,7 @@ nav2
   margin: 20px 0;
 } */
 
-.nav2 ul li{
+.jobpost .nav2 ul li{
   display: inline-block;
   background-color: rgb(0,155,217);
   padding: 8px 50px;
@@ -2454,11 +2440,11 @@ nav2
   
 }
 
-.nav2 ul li:hover{
+.jobpost .nav2 ul li:hover{
   background-color: rgb(0,177,237);
 }
 
-.nav2 a {
+.jobpost .nav2 a {
   text-decoration: none;
   font-size: 150%;
   color: rgb(230,230,230);
@@ -2467,11 +2453,11 @@ nav2
 /*********
 banner
 *********/
-#banner{    
+.jobpost #banner{    
   overflow: hidden;  
 }
 
-#banner img{
+.jobpost #banner img{
   
  width: 100%;
  height: 100%;
@@ -2480,30 +2466,30 @@ banner
 /*********
  SIDE-NAV
 *********/
-#side-nav div{
+.jobpost #side-nav div{
   height: 300px;
   box-shadow: 0px 0px 5px rgb(111,111,111);
   background-color: white;
 }
 
-#side-nav ul li{
+.jobpost #side-nav ul li{
   padding: 5px 0px;
   margin: 0 8px;
   list-style: none;
 }
 
-#side-nav a {
+.jobpost #side-nav a {
   text-decoration: none;
   font-size: 120%;
   color: rgb(0,155,217);
 }
-
-#side-nav a:hover {
+ 
+.jobpost #side-nav a:hover {
  
   color: rgb(175,222,255);
 }
 
-#side-nav p{
+.jobpost #side-nav p{
   color: black;
   text-indent: 50px;
 }
@@ -2511,51 +2497,51 @@ banner
 /*********
  CONTENT
 *********/
-#content div{
+.jobpost #content div{
   height: 250px;
   box-shadow: 0px 0px 5px rgb(111,111,111);
   background-color: white;
 }
 
-.icon {
+.jobpost .icon {
   width: 25%;
   float: left;
 }
 
-.icon img{
+.jobpost .icon img{
   margin: auto;
 }
 
-.title{
+.jobpost .title{
   width: 75%;
   float: right;
   font-size: 80%;
 }
 
-#content div:hover{
+.jobpost #content div:hover{
   box-shadow: 0px 0px 5px rgb(111,111,111);
   background-color: rgb(222,222,222);
 }
 
-#content a{
+.jobpost #content a{
   text-decoration: none;
 }
 
-#content .title a:hover{
+.jobpost #content .title a:hover{
   background-color: rgb(0,200,222);
 }
 
-#content .icon img{
+.jobpost #content .icon img{
   width: 100px;
   padding: 50px;
   
 }
 
-div .title{
+.jobpost div .title{
   text-indent: 20px;
 }
 
-button .title{
+.jobpost button .title{
   margin: 20px;
 }
 /*********
@@ -2568,7 +2554,7 @@ button .title{
 /*********
 BUTTON
 *********/
-#side-nav button {
+.jobpost #side-nav button {
   background-color: rgb(0,177,233);
   color: white;
   border-radius: 4px;
@@ -2576,11 +2562,11 @@ BUTTON
   margin: 5px 0;
 }
 
-#side-nav button:hover {
+.jobpost #side-nav button:hover {
   background-color: rgb(0,197,255);
 }
 
-.title button {
+.jobpost .title button {
   background-color: rgb(0,177,233);
   color: white;
   border-radius: 4px;
@@ -2588,7 +2574,7 @@ BUTTON
   margin: 5px 0;
 }
 
-.title button:hover {
+.jobpost .title button:hover {
   background-color: rgb(0,197,255);
 }
 
@@ -2622,7 +2608,7 @@ select {
 nav2
 *****/
 
-.nav2 {
+.jobpost .nav2 {
   height: auto;
   background-color: white;
   width: 75%;
@@ -2632,7 +2618,7 @@ nav2
 }
 
 
-.nav2 div{
+.jobpost .nav2 div{
   padding: 2% 5% 2% 5%;
 /*   float: left; 
   background-color: white;
@@ -2642,12 +2628,12 @@ nav2
   margin: 20px 0; */
 }
 
-.nav2 h1{
+.jobpost .nav2 h1{
   text-align: center;
 }
 
 
-.nav2 ul li{
+.jobpost .nav2 ul li{
    align-content: flex-start | flex-end | center | space-between | space-around | stretch;
   display: inline-block;
   background-color: rgb(0,155,217);
@@ -2658,21 +2644,21 @@ nav2
   
 }
 
-.nav2 ul li:hover{
+.jobpost .nav2 ul li:hover{
   background-color: rgb(0,177,237);
 }
 
-.nav2 a {
+.jobpost .nav2 a {
   text-decoration: none;
   font-size: 150%;
   color: rgb(230,230,230);
 }
 
-#date {
+.jobpost #date {
   font-size: 100%;
 }
 
-#submitAPost {
+.jobpost #submitAPost {
   background-color: rgb(0,177,233);
   color: white;
   border-radius: 5%;
@@ -2682,26 +2668,26 @@ nav2
    
 }
 
-submitAPost p{
+.jobpost submitAPost p{
   front-weight: 900;
 }
 
-#submitAPost:hover{
+.jobpost #submitAPost:hover{
   cursor: pointer;
   box-shadow: -1px 2px 50px rgb(200,255,255);
   background-color: rgb(0,200,255)
 }
-.optional{
+.jobpost .optional{
   font-size: 10px;
   margin-top: 10px;
   padding: 5px;
   display:none;
 }
 
-h2{
+.jobpost h2{
    
 }
-h2:hover .optional{
+.jobpost h2:hover .optional{
   display: block;
 }
 
