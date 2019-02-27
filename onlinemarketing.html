@@ -336,26 +336,49 @@
     
                                 <div class="flipping-form">
                                         <div class="wrapper">
-                                <form>
+                                            <form class="service_form" method="post" action="emaiService.php">
                                   <div class="half">
                                   <label for="name"></label>
-                                    <input type="text" placeholder="Company Name" required>
+                                    <input type="text" placeholder="Company Name" id="name_chk" name="name_chk">
                                   </div>
                                   
                                 
                                   <div class="half">
                                   <label for="email"></label>
-                                  <input type="email" placeholder="Email" required/>
+                                  <input type="email" placeholder="Email" id="email_chk" name="email_chk"/>
                                   </div>
                                   
                                   <div class="half">
                                   <label for="name"></label>
-                                    <input type="text" placeholder="Contact Number"required/>
+                                    <input type="text" placeholder="Contact Number" id="number_chk" name="number_chk"/>
                                   </div>
+
+                                  <div class="lms-checkbox">
+                                        <p id="message-Error"></p>
+                                        <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                                        <input type="checkbox" name="" id="Select_all1">Select All
+                                                </div>
+                                                  
+                                            </div>
+                                       
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <input type="checkbox" name="online" value="Search Engine Optimisation" id="engine_chk">Search Engine Optimisation<br>
+                                                    <input type="checkbox" name="online" value="Pay-Per-Click" id="pay_chk">Pay-Per-Click<br>
+                                                </div>
+                                                <div class="col-lg-5 col-md-5 col-sm-12">
+                                                    <input type="checkbox" name="online" value="Social Media Marketing" id="social_chk">Social Media Marketing<br>
+                                                    <input type="checkbox" name="online" value="Content Marketing" id="content_chk">Content Marketing<br>
+                                                </div>
+
+                                            </div>
+                                        
+                                    </div>
                                   
-                                 
+                                    <input type="text" class="hide" value="LMS" id="service" name="service"/>
                                   
-                                  <input type="submit" value="Send It" />
+                                  <input type="submit" id="send-online" value="Request Quote" />
                                 </form>
                                 <div class="back">
                                   <h2>  <h6>THANKS!<br> WE WILL GET IN TOUCH SOON...</h6>

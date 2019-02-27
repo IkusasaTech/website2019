@@ -98,7 +98,8 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown dropdown-submenu">
-                                        <a class="dropdown-item div-drop" href="Ikusasa - Public -Full Training Schedule.pdf">COURSE SCHEDULE
+                                        <a class="dropdown-item div-drop" href="Ikusasa - Public -Full Training Schedule.pdf">COURSE
+                                            SCHEDULE
                                         </a>
 
                                     </li>
@@ -133,7 +134,8 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown dropdown-submenu">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">SMALL MEDIUM ENTERPRISE</a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">SMALL MEDIUM
+                                            ENTERPRISE</a>
                                         <ul class="dropdown-menu">
                                             <li>
                                                 <a href="CompanyReg.html">Company Registration</a>
@@ -159,7 +161,7 @@
                                         </ul>
                                     </li>
                                 </ul>
-                                
+
                             </li>
                             <li class="dropdown-holder">
                                 <a href="support-maintanance.html">SUPPORT </a>
@@ -226,11 +228,11 @@
     <div class="container">
         <div class="row">
             <div class="cards">
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="iterm2">
-                    <img src="images/assurance.jpg" alt="multiple screen">
-                </div><br>
-                <div class="iterm2">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="iterm2">
+                        <img src="images/assurance.jpg" alt="multiple screen">
+                    </div><br>
+                    <div class="iterm2">
                         <h6>IT Assurance Services</h6><br>
                         <p class="parag">
                             Assurance is the process of getting the right information to the
@@ -244,14 +246,14 @@
                             Confidentiality, Nonrepudiation.
                         </p><br>
                     </div>
+                </div>
             </div>
-        </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="cards">
-                <div class="iterm2">
-                    <img src="images/infrastructure1.jpg" alt="multiple screen">
-                </div><br>
-                <div class="iterm2">
+                    <div class="iterm2">
+                        <img src="images/infrastructure1.jpg" alt="multiple screen">
+                    </div><br>
+                    <div class="iterm2">
                         <h6>IT Infrastructure Assessment</h6><br>
                         <p class="parag">
                             IT assessment help Optimize IT resources through proper
@@ -264,9 +266,9 @@
                             understanding and alignment with the customer's requirement and expectation.
                         </p><br>
                     </div>
+                </div>
             </div>
         </div>
-    </div>
     </div>
     <hr>
     <div class="container">
@@ -343,17 +345,18 @@
         </div>
     </div>
     <br>
-  <!--====Modal====-->
-  <div class="container_modal">
+    <!--====Modal====-->
+    <div class="container_modal">
         <!-- Trigger the modal with a button -->
         <center>
-            <button type="button" class="glowing-button online-quote" data-toggle="modal" data-target="#myModal">Get Quote</button>
+            <button type="button" class="glowing-button online-quote" data-toggle="modal" data-target="#myModal">Get
+                Quote</button>
         </center>
-    
+
         <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog">
-    
+
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
@@ -361,49 +364,75 @@
                         <h4 class="modal-title">IT-Audit</h4>
                     </div>
                     <div class="modal-body">
-    
-                                <div class="flipping-form">
-                                        <div class="wrapper">
-                                <form>
-                                  <div class="half">
-                                  <label for="name"></label>
-                                    <input type="text" placeholder="Company Name" required/>
-                                  </div>
-                                  
-                                
-                                  <div class="half">
-                                  <label for="email"></label>
-                                  <input type="email" placeholder="Email" required/>
-                                  </div>
-                                  
-                                  <div class="half">
-                                  <label for="name"></label>
-                                    <input type="text" placeholder="Contact Number" required/>
-                                  </div>
-                                  
-                                 
-                                  
-                                  <input type="submit" value="Send It" />
+
+                        <div class="flipping-form">
+                            <div class="wrapper">
+                                <form class="service_form" method="post" action="emaiService.php">
+                                    <div class="half">
+                                        <label for="name"></label>
+                                        <input type="text" placeholder="Company Name" id="name_chk" name="name_chk"/>
+                                    </div>
+
+
+                                    <div class="half">
+                                        <label for="email"></label>
+                                        <input type="text" placeholder="Email" id="email_chk" name="email_chk"/>
+                                    </div>
+
+                                    <div class="half">
+                                        <label for="name"></label>
+                                        <input type="text" placeholder="Contact Number" id="number_chk" name="number_chk"/>
+                                    </div>
+                                    <div class="Audit-checkbox">
+                                            <p id="message-Error"></p>
+                                            <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                                            <input type="checkbox"  id="Select_all3" value="Select All">Select All
+                                                    </div>
+                                                      
+                                                </div>
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+
+                                                   
+                                                    <input type="checkbox" name="serviceType" value="IT Assurance Services" id="service_chk">IT Assurance Services<br>
+                                                    <input type="checkbox" name="serviceType" value="IT Infrastructure Assessment" id="infra_chk">IT Infrastructure Assessment<br>
+                                                    <input type="checkbox" name="serviceType" value="IT Infrastructure Audit" id="audit_chk"> IT Infrastructure Audit<br>
+                                                </div>
+                                                <div class="col-lg-5 col-md-5 col-sm-12">
+                                                        
+                                                    <input type="checkbox" name="serviceType" value="IT Compliance Audit" id="compliance_chk">IT Compliance Audit <br>
+                                                    <input type="checkbox" name="serviceType" value="Insider Attacks Audit" id="attacks_chk">Insider Attacks Audit<br>
+                                                </div>
+
+                                            </div>
+                                            <p id="checked" name="checked" class="hide">This</p>
+                                    </div>
+                                    
+                                    <input type="text" class="hide" value="Intranet" id="service" name="service" />
+
+                                    <input type="submit" id="send-Quotation" value="Request Quote" />
                                 </form>
                                 <div class="back">
-                                  <h2>  <h6>THANKS!<br> WE WILL GET IN TOUCH SOON...</h6>
-                                </h2>
-                                  </div>
-                                </div>
-                                </div>
-                                </div>
-                    
-    
+                                    <h2>
+                                        <h6>THANKS!<br> WE WILL GET IN TOUCH SOON...</h6>
+                                    </h2>
+                                
+                            </div>
+                            </div>
                         </div>
                     </div>
-            <div class="modal-footerr">
-                    <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                </div>
             </div>
+            <div class="modal-footerr">
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
-    <!--====End Modal====--> 
+    <!--====End Modal====-->
     <!---Footer---->
     <footer>
         <div class="container">
@@ -581,6 +610,7 @@
     <script type="text/javascript" src="js/theme.js"></script>
     <script type="text/javascript" src="js/emailValidation.js"></script>
     <script type="text/javascript" src="js/script-temp.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
     <script type="text/javascript">
         function add_chatinline() {
             var hccid = 94367399;

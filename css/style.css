@@ -463,7 +463,7 @@ ul.social-icons {
 .modal-footerr{
   background-color: maroon;
   width: 599px;
-  margin-left: 368px;
+  margin-left: 375px;
   margin-top: -32px;
   height: -110px;
   color: white;
@@ -2501,7 +2501,6 @@ form {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background: #d9edfe;
-  border: 5px solid #white;
   border-radius: 4px;
      padding: 40px 3px;
 }
@@ -2552,5 +2551,32 @@ input[type="submit"]:hover, input[type="submit"]:focus {
       
 }
 
+.Audit-checkbox{
+  margin-left: 70px;
+}
 
+.Intranet-checkbox{
+  margin-left: 70px;
+}
+.lms-checkbox{
+  margin-left: 70px;
+}
+#name_chk:not(:focus){
+  color: black ;
+}
+#email_chk:not(:focus){
+  color: black ;
+}
+#number_chk:not(:focus){
+  color: black ;
+}
+#name_chk:focus{
+  color: black !important;
+}
+#email_chk:focus{
+  color: black !important;
+}
+#number_chk:focus{
+  color: black !important;
+}
 

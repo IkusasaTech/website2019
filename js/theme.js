@@ -639,7 +639,6 @@ jQuery(document).on('ready', function () {
     bootstrapProgress();
     clientSlider();
     partnersLogo();
-    contactFormValidation();
     closeSuccessAlert();
     cladendar();
     subMenuExpend()
