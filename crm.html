@@ -236,6 +236,9 @@
         <hr>
         <div class="container">
                 <div class="row">
+                        <strong><center>Question
+                                is are you doing the right thing to provide quality 
+                                customer experience ?</center></strong><br>
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="iterm2">
         
@@ -270,9 +273,7 @@
                         </div>
                 </div>
             </div>
-            <strong><center>Question
-                is are you doing the right thing to provide quality 
-                customer experience ?</center></strong>
+            
             <hr>
             <br>
             <div class="container">
@@ -314,11 +315,65 @@
                         </div>
                     </div>
                 </div>
-                <center> <a href="contact.html#send-msg" class="glowing-button crm-quote">Get A Quote
-                    </a>
-                    </p>
-                </center>
+
+  <!--====Modal====-->
+  <div class="container_modal">
+        <!-- Trigger the modal with a button -->
+        <center>
+            <button type="button" class="glowing-button online-quote" data-toggle="modal" data-target="#myModal">Get Quote</button>
+        </center>
     
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+    
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Customer Relationship Management</h4>
+                    </div>
+                    <div class="modal-body">
+    
+                                <div class="flipping-form">
+                                        <div class="wrapper">
+                                            <form class="service_form" method="post" action="emaiService.php">
+                                                <div class="half">
+                                                    <label for="name"></label>
+                                                    <input type="text" placeholder="Company Name" id="name_chk" name="name_chk"/>
+                                                </div>
+            
+            
+                                                <div class="half">
+                                                    <label for="email"></label>
+                                                    <input type="text" placeholder="Email" id="email_chk" name="email_chk"/>
+                                                </div>
+            
+                                                <div class="half">
+                                                    <label for="name"></label>
+                                                    <input type="text" placeholder="Contact Number" id="number_chk" name="number_chk"/>
+                                                </div>
+                                  
+                                 
+                                  <input type="text" class="hide" value="Intranet" id="service" name="service" />
+                                  <input type="submit" id="send_crm" value="Request Quote" />
+                                </form>
+                                <div class="back">
+                                  <h2>  <h6>THANKS!<br> WE WILL GET IN TOUCH SOON...</h6>
+                                </h2>
+                                  </div>
+                                </div>
+                                </div>
+                                </div>
+                    
+    
+                        </div>
+                    </div>
+           
+            </div>
+        </div>
+    </div>
+<!--====End Modal====--> 
     <!---Footer---->
     <footer>
             <div class="container">
